@@ -1,0 +1,37 @@
+:root {
+  --accent: #6c5ce7;
+}
+
+[data-theme="dark"] {
+  --bg: #1c1c1c;
+  --card: rgba(44, 44, 46, 0.62);
+  --cardborder: rgba(255, 255, 255, 0.1);
+  --heading: #f4f4f4;
+  --body: #c6c6c6;
+  --muted: #888888;
+  --line: rgba(255, 255, 255, 0.12);
+  --social: #7e7e7e;
+  --ring: #3a3a3a;
+  --cardshadow: none;
+  --bgimg: url("/images/bg-dark.png");
+}
+
+[data-theme="light"] {
+  --bg: #f4f4f5;
+  --card: rgba(255, 255, 255, 0.6);
+  --cardborder: rgba(0, 0, 0, 0.06);
+  --heading: #1f1f1f;
+  --body: #555555;
+  --muted: #9a9a9a;
+  --line: rgba(0, 0, 0, 0.1);
+  --social: #a6a6a6;
+  --ring: #ececec;
+  --cardshadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+  --bgimg: url("/images/bg-light.png");
+}
+
+body {
+  background: var(--bg);
+  color: var(--body);
+  -webkit-font-smoothing: antialiased;
+}

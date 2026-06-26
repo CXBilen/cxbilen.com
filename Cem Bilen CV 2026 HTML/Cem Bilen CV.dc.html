@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0&display=block" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; }
+  body { background: #d6d4db; -webkit-font-smoothing: antialiased; }
+  @page { size: A4; margin: 0; }
+  @media print {
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    html, body { margin: 0; padding: 0; background: #fff; }
+    .page { box-shadow: none !important; margin: 0 !important; }
+    [data-print-hide] { display: none !important; }
+  }
+</style>
+</helmet>
+<div class="page" ref="{{ setRoot }}" style="background:var(--bg,#1c1c1c);width:794px;min-height:1123px;margin:24px auto;box-sizing:border-box;position:relative;display:flex;gap:42px;padding:40px 48px 28px;font-family:'Hanken Grotesk',system-ui,sans-serif;box-shadow:0 24px 64px rgba(20,15,30,0.22);">
+
+  <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;pointer-events:none;background-image:var(--bgimg,url('bg-dark.png'));background-size:cover;background-position:center top;"></div>
+
+  <aside style="flex:none;width:250px;display:flex;flex-direction:column;gap:28px;position:relative;z-index:1;">
+
+    <div style="background:var(--cardbg,rgba(44,44,46,0.62));border:1px solid var(--cardborder,rgba(255,255,255,0.10));border-radius:22px;padding:30px 28px;box-shadow:var(--cardshadow,none);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);">
+      <div style="display:flex;justify-content:center;margin-bottom:20px;">
+        <sc-if value="{{ showPhoto }}" hint-placeholder-val="{{ true }}">
+          <div style="width:90px;height:90px;border-radius:50%;border:3px solid var(--ring,#3a3a3a);background-image:url('photo.jpg');background-size:cover;background-position:50% 30%;background-repeat:no-repeat;"></div>
+        </sc-if>
+        <sc-if value="{{ noPhoto }}">
+          <div style="width:90px;height:90px;border-radius:50%;border:3px solid var(--ring,#3a3a3a);background:linear-gradient(135deg,var(--accent,#6c5ce7),#5849c2);display:flex;align-items:center;justify-content:center;font:800 30px/1 'Hanken Grotesk',sans-serif;color:#fff;letter-spacing:0.02em;">CB</div>
+        </sc-if>
+      </div>
+      <div style="font:700 22px/1.2 'Hanken Grotesk',sans-serif;color:var(--heading,#f4f4f4);">Cem Bilen</div>
+      <div style="margin-top:9px;display:flex;flex-direction:column;gap:3px;">
+        <div style="font:700 14.5px/1.2 'Hanken Grotesk',sans-serif;color:var(--accent,#6c5ce7);">Product Designer</div>
+        <div style="font:600 10px/1.2 'Hanken Grotesk',sans-serif;color:var(--muted,#888888);letter-spacing:0.16em;text-transform:uppercase;">Senior UX Engineer</div>
+      </div>
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px;">
+        <a href="/cdn-cgi/l/email-protection#7b38233912171e153b1c161a121755181416" style="display:flex;align-items:center;gap:9px;font:400 13px/1.3 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);text-decoration:none;word-break:break-all;"><span style="font-family:'Material Symbols Outlined';font-size:17px;line-height:1;color:var(--accent,#6c5ce7);flex:none;">mail</span><span class="__cf_email__" data-cfemail="c1829983a8ada4af81a6aca0a8adefa2aeac">[email&#160;protected]</span></a>
+        <a href="tel:+905300402392" style="display:flex;align-items:center;gap:9px;font:400 13px/1.3 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);text-decoration:none;"><span style="font-family:'Material Symbols Outlined';font-size:17px;line-height:1;color:var(--accent,#6c5ce7);flex:none;">call</span>+90 530 040 23 92</a>
+        <div style="display:flex;align-items:center;gap:9px;font:400 13px/1.3 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);"><span style="font-family:'Material Symbols Outlined';font-size:17px;line-height:1;color:var(--accent,#6c5ce7);flex:none;">location_on</span>Izmir, Türkiye</div>
+      </div>
+    </div>
+
+    <div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:15px;">
+        <span style="font-family:'Material Symbols Outlined';font-size:20px;line-height:1;color:var(--accent,#6c5ce7);">psychology</span>
+        <span style="font:700 20px/1.2 'Hanken Grotesk',sans-serif;color:var(--heading,#f4f4f4);">Skills</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 10px;">
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">category</span>Product Design</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">design_services</span>Figma</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">draw</span>UX / UI Design</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">grid_view</span>Design Systems</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">code</span>UX Engineering</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">animation</span>Prototyping</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">trending_up</span>CRO</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">science</span>A/B Testing</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">route</span>Journey Mapping</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">fact_check</span>Heuristic Audits</span>
+      </div>
+    </div>
+
+    <div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:15px;">
+        <span style="font-family:'Material Symbols Outlined';font-size:20px;line-height:1;color:var(--accent,#6c5ce7);">build</span>
+        <span style="font:700 20px/1.2 'Hanken Grotesk',sans-serif;color:var(--heading,#f4f4f4);">Tools</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 10px;">
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">code</span>HTML / CSS</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">hub</span>React</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">javascript</span>JavaScript</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">bolt</span>Next.js</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">css</span>SASS</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">style</span>Tailwind CSS</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">data_object</span>Design Tokens</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">analytics</span>GA4 / Funnels</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">bar_chart</span>Looker Studio</span>
+        <span style="display:flex;align-items:center;gap:7px;font:500 12px/1.2 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);white-space:nowrap;"><span style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;color:var(--muted,#888888);flex:none;">auto_awesome</span>AI Prototyping</span>
+      </div>
+    </div>
+
+    <div style="margin-top:2px;border-top:1px solid var(--line,rgba(255,255,255,0.12));">
+      <a href="https://linkedin.com/in/cxbilen" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line,rgba(255,255,255,0.12));text-decoration:none;">
+        <span style="display:flex;align-items:center;gap:10px;font:500 13px/1 'Hanken Grotesk',sans-serif;color:var(--social,#7e7e7e);"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" style="flex:none;display:block;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>LinkedIn</span>
+        <span style="width:23px;height:23px;border-radius:50%;border:1px solid var(--line,rgba(255,255,255,0.12));display:flex;align-items:center;justify-content:center;color:var(--social,#7e7e7e);font-size:11px;">↗</span>
+      </a>
+      <a href="https://cxbilen.com" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line,rgba(255,255,255,0.12));text-decoration:none;">
+        <span style="display:flex;align-items:center;gap:10px;font:500 13px/1 'Hanken Grotesk',sans-serif;color:var(--social,#7e7e7e);"><img src="cx-logo.png" alt="" style="width:17px;height:17px;border-radius:50%;flex:none;display:block;">Portfolio</span>
+        <span style="width:23px;height:23px;border-radius:50%;border:1px solid var(--line,rgba(255,255,255,0.12));display:flex;align-items:center;justify-content:center;color:var(--social,#7e7e7e);font-size:11px;">↗</span>
+      </a>
+      <a href="https://github.com/CXBilen" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line,rgba(255,255,255,0.12));text-decoration:none;">
+        <span style="display:flex;align-items:center;gap:10px;font:500 13px/1 'Hanken Grotesk',sans-serif;color:var(--social,#7e7e7e);"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" style="flex:none;display:block;"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</span>
+        <span style="width:23px;height:23px;border-radius:50%;border:1px solid var(--line,rgba(255,255,255,0.12));display:flex;align-items:center;justify-content:center;color:var(--social,#7e7e7e);font-size:11px;">↗</span>
+      </a>
+    </div>
+
+  </aside>
+
+  <main style="flex:1;min-width:0;position:relative;z-index:1;">
+
+    <section>
+      <div style="display:flex;align-items:center;gap:9px;">
+        <span style="font-family:'Material Symbols Outlined';font-size:22px;line-height:1;color:var(--accent,#6c5ce7);">person</span>
+        <span style="font:700 23px/1.15 'Hanken Grotesk',sans-serif;color:var(--heading,#f4f4f4);">About me</span>
+      </div>
+      <p style="font:400 12.5px/1.55 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);margin:8px 0 0;text-wrap:pretty;">Product Designer and Senior UX Engineer with 5+ years across consumer and SaaS products — owning surfaces end-to-end from ambiguous requirements to polished, shipped UI. I pair design systems and experimentation-driven CRO with hands-on front-end execution, so product decisions are fast to test, build, and improve. Portfolio at <span style="color:var(--accent,#6c5ce7);font-weight:600;">cxbilen.com</span>.</p>
+    </section>
+
+    <section style="margin-top:18px;">
+      <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px;">
+        <span style="font-family:'Material Symbols Outlined';font-size:22px;line-height:1;color:var(--accent,#6c5ce7);">work</span>
+        <span style="font:700 23px/1.15 'Hanken Grotesk',sans-serif;color:var(--heading,#f4f4f4);">Experience</span>
+      </div>
+
+      <div style="margin-top:11px;">
+        <div style="font:700 14.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--accent,#6c5ce7);">Senior UX Engineer<span style="color:var(--body,#c6c6c6);font-weight:600;"> @ Efsora Labs</span></div>
+        <div style="font:500 11.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--muted,#888888);margin-top:3px;">Feb 2026 – Present · Türkiye</div>
+        <p style="font:400 11.5px/1.5 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);margin:5px 0 0;text-wrap:pretty;">Lead UX design, design systems, and frontend-ready implementation across SaaS and web flows — turning PRDs into journeys, Figma, prototypes, and dev-ready specs, and standardising a design system of <span style="color:var(--accent,#6c5ce7);font-weight:700;">40+</span> components.</p>
+      </div>
+
+      <div style="margin-top:11px;">
+        <div style="font:700 14.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--accent,#6c5ce7);">Senior CRO Executive<span style="color:var(--body,#c6c6c6);font-weight:600;"> @ Digital House</span></div>
+        <div style="font:500 11.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--muted,#888888);margin-top:3px;">Mar 2025 – Jan 2026 · Istanbul</div>
+        <p style="font:400 11.5px/1.5 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);margin:5px 0 0;text-wrap:pretty;">Owned CRO and UX for web and e-commerce, turning funnel analysis into prioritized A/B tests that lifted conversion <span style="color:var(--accent,#6c5ce7);font-weight:700;">+12%</span> and reduced checkout drop-off <span style="color:var(--accent,#6c5ce7);font-weight:700;">−16%</span>.</p>
+      </div>
+
+      <div style="margin-top:11px;">
+        <div style="font:700 14.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--accent,#6c5ce7);">UX/UI Designer<span style="color:var(--body,#c6c6c6);font-weight:600;"> @ Eva</span></div>
+        <div style="font:500 11.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--muted,#888888);margin-top:3px;">Sep 2023 – Aug 2024 · Izmir</div>
+        <p style="font:400 11.5px/1.5 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);margin:5px 0 0;text-wrap:pretty;">Designed end-to-end SaaS interfaces and Figma prototypes, simplifying complex flows into clear workflows and improving task-success in usability tests by <span style="color:var(--accent,#6c5ce7);font-weight:700;">+20%</span>.</p>
+      </div>
+
+      <div style="margin-top:11px;">
+        <div style="font:700 14.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--accent,#6c5ce7);">Designer Project Manager<span style="color:var(--body,#c6c6c6);font-weight:600;"> @ innoscripta AG</span></div>
+        <div style="font:500 11.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--muted,#888888);margin-top:3px;">May 2023 – Jul 2023 · Berlin</div>
+      </div>
+
+      <div style="margin-top:11px;">
+        <div style="font:700 14.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--accent,#6c5ce7);">UX/UI Designer<span style="color:var(--body,#c6c6c6);font-weight:600;"> @ StudioMoco</span></div>
+        <div style="font:500 11.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--muted,#888888);margin-top:3px;">Dec 2022 – May 2023 · Nuremberg</div>
+      </div>
+
+      <div style="margin-top:11px;">
+        <div style="font:700 14.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--accent,#6c5ce7);">CRO Executive<span style="color:var(--body,#c6c6c6);font-weight:600;"> @ Hype</span></div>
+        <div style="font:500 11.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--muted,#888888);margin-top:3px;">Apr 2022 – Sep 2022 · Istanbul</div>
+      </div>
+
+      <div style="margin-top:11px;">
+        <div style="font:700 14.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--accent,#6c5ce7);">Web Developer<span style="color:var(--body,#c6c6c6);font-weight:600;"> @ İnce Fikirler</span></div>
+        <div style="font:500 11.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--muted,#888888);margin-top:3px;">Mar 2019 – Feb 2020 · Izmir</div>
+      </div>
+    </section>
+
+    <section style="margin-top:18px;">
+      <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px;">
+        <span style="font-family:'Material Symbols Outlined';font-size:22px;line-height:1;color:var(--accent,#6c5ce7);">school</span>
+        <span style="font:700 23px/1.15 'Hanken Grotesk',sans-serif;color:var(--heading,#f4f4f4);">Education</span>
+      </div>
+
+      <div style="margin-top:9px;">
+        <div style="font:700 14px/1.3 'Hanken Grotesk',sans-serif;color:var(--accent,#6c5ce7);">Associate's, Computer Programming<span style="color:var(--body,#c6c6c6);font-weight:600;"> @ Izmir University of Economics</span></div>
+        <div style="font:500 11.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--muted,#888888);margin-top:3px;">2014 – 2016</div>
+        <p style="font:400 11.5px/1.5 'Hanken Grotesk',sans-serif;color:var(--body,#c6c6c6);margin:5px 0 0;text-wrap:pretty;">Software, web, and database fundamentals — the technical base behind a design practice that ships.</p>
+      </div>
+
+      <div style="margin-top:9px;">
+        <div style="font:700 14px/1.3 'Hanken Grotesk',sans-serif;color:var(--accent,#6c5ce7);">Database Interactive Programming<span style="color:var(--body,#c6c6c6);font-weight:600;"> @ Ç. Altan Anatolian Technical HS</span></div>
+        <div style="font:500 11.5px/1.3 'Hanken Grotesk',sans-serif;color:var(--muted,#888888);margin-top:3px;">2010 – 2014</div>
+      </div>
+    </section>
+
+    <section style="margin-top:16px;">
+      <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px;">
+        <span style="font-family:'Material Symbols Outlined';font-size:22px;line-height:1;color:var(--accent,#6c5ce7);">star</span>
+        <span style="font:700 23px/1.15 'Hanken Grotesk',sans-serif;color:var(--heading,#f4f4f4);">Selected Work</span>
+      </div>
+      <div style="margin-top:9px;display:flex;flex-direction:column;gap:7px;">
+        <div style="display:flex;gap:8px;font:400 12px/1.4 'Hanken Grotesk',sans-serif;"><span style="font-weight:700;color:var(--accent,#6c5ce7);white-space:nowrap;">Looplift</span><span style="color:var(--body,#c6c6c6);">— AI-assisted UX experimentation &amp; product-growth concept.</span></div>
+        <div style="display:flex;gap:8px;font:400 12px/1.4 'Hanken Grotesk',sans-serif;"><span style="font-weight:700;color:var(--accent,#6c5ce7);white-space:nowrap;">UX Sentinel</span><span style="color:var(--body,#c6c6c6);">— UX-to-code, design-system &amp; AI-agent exploration.</span></div>
+        <div style="display:flex;gap:8px;font:400 12px/1.4 'Hanken Grotesk',sans-serif;"><span style="font-weight:700;color:var(--accent,#6c5ce7);white-space:nowrap;">Maestro</span><span style="color:var(--body,#c6c6c6);">— Web-app architecture, AI workflows &amp; user-facing product.</span></div>
+      </div>
+    </section>
+
+  </main>
+
+  <button data-print-hide onClick="{{ toggleTheme }}" style="position:fixed;top:16px;right:16px;z-index:60;border:none;cursor:pointer;font:600 12px/1 'Hanken Grotesk',system-ui,sans-serif;color:#fff;background:rgba(0,0,0,0.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:9px 15px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,0.28);">Switch theme</button>
+
+</div>
+</x-dc>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:794,&quot;height&quot;:1123},&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;dark&quot;,&quot;light&quot;],&quot;default&quot;:&quot;dark&quot;,&quot;tsType&quot;:&quot;\&quot;dark\&quot; | \&quot;light\&quot;&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;options&quot;:[&quot;#6c5ce7&quot;,&quot;#8b7cf0&quot;,&quot;#a29bfe&quot;,&quot;#5849c2&quot;],&quot;default&quot;:&quot;#7867f4&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;showPhoto&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { theme: undefined };
+  palettes() {
+    return {
+      dark:  { bgimg:"url('bg-dark.png')", bg:'#1c1c1c', card:'#2a2a2a', heading:'#f4f4f4', body:'#c6c6c6', muted:'#888888', line:'rgba(255,255,255,0.12)', social:'#7e7e7e', ring:'#3a3a3a', cardbg:'rgba(44,44,46,0.62)', cardborder:'rgba(255,255,255,0.10)', grid:'rgba(255,255,255,0.07)', glow:'rgba(255,255,255,0.18)', cardshadow:'none' },
+      light: { bgimg:"url('bg-light.png')", bg:'#f4f4f5', card:'#ffffff', heading:'#1f1f1f', body:'#555555', muted:'#9a9a9a', line:'rgba(0,0,0,0.10)', social:'#a6a6a6', ring:'#ececec', cardbg:'rgba(255,255,255,0.60)', cardborder:'rgba(0,0,0,0.06)', grid:'#e5e7eb', glow:'rgba(255,255,255,0.65)', cardshadow:'0 14px 36px rgba(0,0,0,0.08)' }
+    };
+  }
+  current() { return this.state.theme || this.props.theme || 'dark'; }
+  applyTheme() {
+    if (!this.rootEl) return;
+    const c = this.palettes()[this.current()] || this.palettes().dark;
+    const accent = this.props.accent || '#7867f4';
+    const s = this.rootEl.style;
+    Object.keys(c).forEach((k) => s.setProperty('--' + k, c[k]));
+    s.setProperty('--accent', accent);
+  }
+  componentDidMount() { this.applyTheme(); }
+  componentDidUpdate() { this.applyTheme(); }
+  renderVals() {
+    return {
+      showPhoto: this.props.showPhoto !== false,
+      noPhoto: this.props.showPhoto === false,
+      setRoot: (el) => { this.rootEl = el; this.applyTheme(); },
+      toggleTheme: () => this.setState({ theme: this.current() === 'dark' ? 'light' : 'dark' })
+    };
+  }
+}
+</script>
+</body>
+</html>
