@@ -3,7 +3,7 @@ export const cvData = {
   title: "Product Designer",
   subtitle: "Senior UX Engineer",
   contact: {
-    email: "cem@cxbilen.com",
+    email: "CXBilen@gmail.com",
     phone: "+90 530 040 23 92",
     location: "Izmir, Türkiye",
   },
