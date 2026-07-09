@@ -3,11 +3,13 @@
 import type { ATSHandler } from './base';
 import type { ATSType } from '../types';
 import { GreenhouseHandler } from './greenhouse';
+import { AshbyHandler } from './ashby';
 
 const handlers = new Map<ATSType, ATSHandler>();
 
 // Register handlers
 registerHandler(new GreenhouseHandler());
+registerHandler(new AshbyHandler());
 
 export function registerHandler(handler: ATSHandler): void {
   handlers.set(handler.atsType, handler);
