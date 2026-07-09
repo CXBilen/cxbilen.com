@@ -42,7 +42,7 @@ export const cvData = {
     {
       role: "Senior UX Engineer",
       company: "Efsora Labs",
-      period: "Feb 2026 – Present · Türkiye",
+      period: "Feb 2026 – Jul 2026 · Türkiye",
       body: "Lead UX design, design systems, and frontend-ready implementation across SaaS and web flows — turning PRDs into journeys, Figma, prototypes, and dev-ready specs, and standardising a design system of 40+ components.",
     },
     {
