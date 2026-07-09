@@ -3,6 +3,8 @@
 import type { Page } from 'playwright';
 import type { ATSType, ApplicationData } from '../types';
 
+export type { ApplicationData };
+
 export interface ATSHandler {
   atsType: ATSType;
   detect(url: string): boolean;

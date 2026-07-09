@@ -4,12 +4,16 @@ import type { ATSHandler } from './base';
 import type { ATSType } from '../types';
 import { GreenhouseHandler } from './greenhouse';
 import { AshbyHandler } from './ashby';
+import { SmartRecruitersHandler } from './smartrecruiters';
+import { GenericHandler } from './generic';
 
 const handlers = new Map<ATSType, ATSHandler>();
 
 // Register handlers
 registerHandler(new GreenhouseHandler());
 registerHandler(new AshbyHandler());
+registerHandler(new SmartRecruitersHandler());
+registerHandler(new GenericHandler());
 
 export function registerHandler(handler: ATSHandler): void {
   handlers.set(handler.atsType, handler);
