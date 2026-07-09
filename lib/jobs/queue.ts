@@ -3,6 +3,9 @@
 import type { QueuedJob, CompletedJob, FailedJob } from './types';
 import { getQueue, saveQueue } from './storage';
 
+// Re-export for other modules
+export { getQueue, saveQueue } from './storage';
+
 export function addToQueue(job: QueuedJob): void {
   const queue = getQueue();
   queue.pending.push(job);
