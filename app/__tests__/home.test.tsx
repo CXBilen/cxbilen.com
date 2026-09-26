@@ -8,8 +8,8 @@ describe("Home page", () => {
     expect(
       screen.getByRole("heading", { name: /cem bilen/i, level: 1 }),
     ).toBeInTheDocument();
-    expect(screen.getByText("Looplift")).toBeInTheDocument();
-    expect(screen.getByText("UX Sentinel")).toBeInTheDocument();
-    expect(screen.getByText("Maestro")).toBeInTheDocument();
+    expect(screen.getByText("Surfel")).toBeInTheDocument();
+    expect(screen.getByText("cxbilen.com")).toBeInTheDocument();
+    expect(screen.getByText("SkyWise")).toBeInTheDocument();
   });
 });

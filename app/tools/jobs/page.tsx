@@ -6,9 +6,9 @@ import { ActivityFeed } from '@/components/jobs/ActivityFeed';
 
 export default function JobsDashboard() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold">Job Application Dashboard</h1>
+    <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-12 sm:px-8">
+      <div className="flex flex-col gap-2">
+        <h1 className="font-heading text-3xl font-semibold tracking-tight">Job Application Dashboard</h1>
         <p className="text-muted-foreground">
           Automate job applications to hiddenjobs.dev listings
         </p>

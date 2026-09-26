@@ -3,6 +3,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { CheckIcon, TriangleAlertIcon, XIcon } from 'lucide-react';
+import { Card, CardHeader, CardPanel, CardTitle } from '@/components/ui/card';
 
 interface LogEntry {
   id: string;
@@ -29,26 +31,35 @@ export function ActivityFeed() {
   }, []);
 
   return (
-    <div className="border rounded-lg p-6">
-      <h3 className="text-lg font-semibold mb-4">Recent Activity</h3>
-
+    <Card>
+      <CardHeader>
+        <CardTitle render={<h2 />}>Recent Activity</CardTitle>
+      </CardHeader>
+      <CardPanel>
       {logs.length === 0 ? (
-        <p className="text-muted-foreground">No recent activity</p>
+        <p className="text-sm text-muted-foreground">No recent activity</p>
       ) : (
-        <div className="space-y-2">
+        <div className="flex flex-col gap-3">
           {logs.map(log => (
-            <div key={log.id} className="text-sm">
-              <span className={`font-${log.level === 'error' ? 'bold text-red-600' : 'semibold'}`}>
-                {log.level === 'info' ? '✅' : log.level === 'error' ? '❌' : '⚠️'}
+            <div key={log.id} className="flex flex-wrap items-start gap-x-2 gap-y-1 text-sm">
+              <span className="mt-0.5 shrink-0" aria-label={log.level}>
+                {log.level === 'info' ? (
+                  <CheckIcon className="size-4 text-success-foreground" />
+                ) : log.level === 'error' ? (
+                  <XIcon className="size-4 text-destructive-foreground" />
+                ) : (
+                  <TriangleAlertIcon className="size-4 text-warning-foreground" />
+                )}
               </span>
-              <span className="ml-2">{log.message}</span>
-              <span className="ml-2 text-muted-foreground">
+              <span className="min-w-0 flex-1 break-words">{log.message}</span>
+              <span className="text-xs tabular-nums text-muted-foreground">
                 {new Date(log.timestamp).toLocaleTimeString()}
               </span>
             </div>
           ))}
         </div>
       )}
-    </div>
+      </CardPanel>
+    </Card>
   );
 }

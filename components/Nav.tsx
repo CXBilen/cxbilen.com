@@ -1,32 +1,35 @@
 import Link from "next/link";
-import Image from "next/image";
 import ThemeToggle from "@/components/ThemeToggle";
+import { Button } from "@/components/ui/button";
 
 export default function Nav() {
   return (
     <nav
       aria-label="Main"
-      className="sticky top-0 z-50 backdrop-blur-md"
-      style={{ background: "color-mix(in srgb, var(--bg) 70%, transparent)" }}
+      className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur-sm"
     >
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-2" aria-label="Home">
-          <Image
-            src="/images/cx-logo.png"
-            alt="Cem Bilen"
-            width={24}
-            height={24}
-            className="rounded-full"
-          />
-          <span className="font-bold text-heading">Cem Bilen</span>
+      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-3 px-6">
+        <Link
+          href="/"
+          className="flex items-center gap-2.5 font-semibold tracking-tight"
+          aria-label="Home"
+        >
+          <span
+            className="flex size-7 items-center justify-center rounded-lg border bg-muted font-mono text-xs"
+            aria-hidden="true"
+          >
+            cb
+          </span>
+          <span>Cem Bilen</span>
         </Link>
-        <div className="flex items-center gap-6 text-sm font-medium text-body">
-          <Link href="/work" className="transition-colors hover:text-accent">
+        <div className="flex items-center gap-1">
+          <Button variant="ghost" render={<Link href="/work" />}>
             Work
-          </Link>
-          <Link href="/cv" className="transition-colors hover:text-accent">
+          </Button>
+          <Button variant="ghost" render={<Link href="/cv" />}>
             CV
-          </Link>
+          </Button>
+          <span className="mx-1 h-4 border-l" aria-hidden="true" />
           <ThemeToggle />
         </div>
       </div>

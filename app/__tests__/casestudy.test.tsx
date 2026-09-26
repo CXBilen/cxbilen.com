@@ -5,10 +5,10 @@ import { getProject } from "@/lib/projects";
 
 describe("CaseStudy", () => {
   it("renders the project title, tagline, and section headings", () => {
-    const project = getProject("ux-sentinel")!;
+    const project = getProject("skywise")!;
     render(<CaseStudy project={project} />);
     expect(
-      screen.getByRole("heading", { name: "UX Sentinel", level: 1 }),
+      screen.getByRole("heading", { name: "SkyWise", level: 1 }),
     ).toBeInTheDocument();
     expect(screen.getByText(project.tagline)).toBeInTheDocument();
     expect(

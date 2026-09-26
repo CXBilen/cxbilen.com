@@ -1,21 +1,19 @@
-"use client";
+import { Button } from "@/components/ui/button";
 
-import { useTheme } from "next-themes";
-
-const DARK = "/cv/Cem Bilen CV 2026 Dark.pdf";
-const LIGHT = "/cv/Cem Bilen CV 2026 Light.pdf";
+const BASE = "/cv/Cem Bilen CV 2026";
 
 export default function DownloadCV() {
-  const { resolvedTheme } = useTheme();
-  const href = resolvedTheme === "dark" ? DARK : LIGHT;
   return (
-    <a
-      href={href}
-      download
-      className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-    >
-      <span className="material-symbols-outlined text-[18px]">download</span>
-      Download PDF
-    </a>
+    <div role="group" aria-label="Download CV" className="flex flex-wrap items-center gap-2">
+      <Button render={<a href={`${BASE}.pdf`} download />}>
+        Download PDF
+      </Button>
+      <Button variant="outline" render={<a href={`${BASE}.docx`} download />}>
+        DOCX
+      </Button>
+      <Button variant="ghost" render={<a href={`${BASE}.txt`} download />}>
+        TXT
+      </Button>
+    </div>
   );
 }

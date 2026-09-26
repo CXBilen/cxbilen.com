@@ -2,9 +2,9 @@ import { describe, it, expect } from "vitest";
 import { projects, getProject } from "@/lib/projects";
 
 describe("projects data", () => {
-  it("has the three seeded projects with unique slugs", () => {
+  it("has the three selected projects with unique slugs", () => {
     const slugs = projects.map((p) => p.slug);
-    expect(slugs).toEqual(["looplift", "ux-sentinel", "maestro"]);
+    expect(slugs).toEqual(["surfel", "cxbilen-com", "skywise"]);
     expect(new Set(slugs).size).toBe(3);
   });
 
@@ -17,7 +17,7 @@ describe("projects data", () => {
   });
 
   it("getProject returns by slug and undefined for unknown", () => {
-    expect(getProject("maestro")?.title).toBe("Maestro");
+    expect(getProject("skywise")?.title).toBe("SkyWise");
     expect(getProject("nope")).toBeUndefined();
   });
 });

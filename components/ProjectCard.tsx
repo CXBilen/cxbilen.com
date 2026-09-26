@@ -1,35 +1,61 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowUpRightIcon } from "lucide-react";
 import type { Project } from "@/lib/projects";
-import Card from "@/components/Card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardPanel,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <Link href={`/work/${project.slug}`} className="group block">
-      <Card className="overflow-hidden transition-transform duration-300 group-hover:-translate-y-1">
-        <div className="relative aspect-[16/10] w-full overflow-hidden">
+    <Link
+      href={`/work/${project.slug}`}
+      className="block h-full rounded-2xl outline-offset-4"
+    >
+      <Card className="h-full overflow-hidden transition-shadow hover:ring-1 hover:ring-ring/40">
+        <div className="relative aspect-[16/10] w-full overflow-hidden border-b bg-muted">
           <Image
             src={project.cover}
-            alt={project.title}
+            alt={`${project.title} interface`}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className="object-cover object-top"
+            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
           />
         </div>
-        <div className="p-5">
-          <h3 className="text-lg font-bold text-heading">{project.title}</h3>
-          <p className="mt-1 text-sm text-body">{project.tagline}</p>
-          <div className="mt-3 flex flex-wrap gap-2">
+        <CardHeader>
+          {project.status && (
+            <p className="mb-2 font-mono text-[11px] leading-relaxed text-muted-foreground">
+              {project.status}
+            </p>
+          )}
+          <CardTitle
+            render={<h3 />}
+            className="flex items-center justify-between gap-2"
+          >
+            {project.title}
+            <ArrowUpRightIcon
+              className="size-4 text-muted-foreground"
+              aria-hidden="true"
+            />
+          </CardTitle>
+          <CardDescription className="leading-relaxed">
+            {project.tagline}
+          </CardDescription>
+        </CardHeader>
+        <CardPanel className="flex items-end">
+          <div className="flex flex-wrap gap-1.5">
             {project.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border px-2.5 py-1 text-xs font-medium text-muted"
-                style={{ borderColor: "var(--line)" }}
-              >
+              <Badge key={tag} variant="secondary">
                 {tag}
-              </span>
+              </Badge>
             ))}
           </div>
-        </div>
+        </CardPanel>
       </Card>
     </Link>
   );

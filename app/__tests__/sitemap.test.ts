@@ -7,8 +7,8 @@ describe("sitemap", () => {
     expect(urls).toContain("https://cxbilen.com");
     expect(urls).toContain("https://cxbilen.com/work");
     expect(urls).toContain("https://cxbilen.com/cv");
-    expect(urls).toContain("https://cxbilen.com/work/looplift");
-    expect(urls).toContain("https://cxbilen.com/work/ux-sentinel");
-    expect(urls).toContain("https://cxbilen.com/work/maestro");
+    expect(urls).toContain("https://cxbilen.com/work/surfel");
+    expect(urls).toContain("https://cxbilen.com/work/cxbilen-com");
+    expect(urls).toContain("https://cxbilen.com/work/skywise");
   });
 });

@@ -1,27 +1,33 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk } from "next/font/google";
+import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
 import Nav from "@/components/Nav";
+import { cvData } from "@/lib/cv";
 
-const hanken = Hanken_Grotesk({
+const inter = Inter({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-inter",
+  display: "swap",
+});
+const geistMono = Geist_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-hanken",
+  variable: "--font-geist-mono",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cxbilen.com"),
   title: {
-    default: "Cem Bilen — Product Designer & Senior UX Engineer",
+    default: `Cem Bilen — ${cvData.title} | Full-stack & AI-native`,
     template: "%s — Cem Bilen",
   },
-  description: "Product Designer & Senior UX Engineer based in Izmir, Türkiye.",
+  description:
+    "Software engineer building full-stack web products with AI-native workflows, UX expertise and conversion thinking. Based in Izmir, Türkiye.",
   openGraph: {
-    title: "Cem Bilen — Product Designer & Senior UX Engineer",
+    title: `Cem Bilen — ${cvData.title} | Full-stack & AI-native`,
     description:
-      "Product Designer & Senior UX Engineer based in Izmir, Türkiye.",
+      "Full-stack web development, AI-native workflows and product engineering informed by UX and conversion optimization.",
     url: "https://cxbilen.com",
     siteName: "cxbilen.com",
     type: "website",
@@ -35,11 +41,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={hanken.variable} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${inter.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
+    >
       <body className="font-sans">
         <ThemeProvider>
-          <Nav />
-          {children}
+          <div className="isolate relative flex min-h-svh flex-col">
+            <Nav />
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>

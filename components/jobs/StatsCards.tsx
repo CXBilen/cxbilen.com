@@ -3,6 +3,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Card, CardPanel } from '@/components/ui/card';
 
 interface Stats {
   total: number;
@@ -27,23 +28,31 @@ export function StatsCards() {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-      <div className="border rounded-lg p-4">
-        <div className="text-2xl font-bold">{stats.total}</div>
-        <div className="text-sm text-muted-foreground">Total</div>
-      </div>
-      <div className="border rounded-lg p-4">
-        <div className="text-2xl font-bold text-green-600">{stats.completed}</div>
-        <div className="text-sm text-muted-foreground">Completed</div>
-      </div>
-      <div className="border rounded-lg p-4">
-        <div className="text-2xl font-bold text-red-600">{stats.failed}</div>
-        <div className="text-sm text-muted-foreground">Failed</div>
-      </div>
-      <div className="border rounded-lg p-4">
-        <div className="text-2xl font-bold text-yellow-600">{stats.skipped}</div>
-        <div className="text-sm text-muted-foreground">Skipped</div>
-      </div>
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <Card>
+        <CardPanel className="flex flex-col gap-1">
+          <div className="text-2xl font-semibold tabular-nums">{stats.total}</div>
+          <div className="text-sm text-muted-foreground">Total</div>
+        </CardPanel>
+      </Card>
+      <Card>
+        <CardPanel className="flex flex-col gap-1">
+          <div className="text-2xl font-semibold tabular-nums text-success-foreground">{stats.completed}</div>
+          <div className="text-sm text-muted-foreground">Completed</div>
+        </CardPanel>
+      </Card>
+      <Card>
+        <CardPanel className="flex flex-col gap-1">
+          <div className="text-2xl font-semibold tabular-nums text-destructive-foreground">{stats.failed}</div>
+          <div className="text-sm text-muted-foreground">Failed</div>
+        </CardPanel>
+      </Card>
+      <Card>
+        <CardPanel className="flex flex-col gap-1">
+          <div className="text-2xl font-semibold tabular-nums text-warning-foreground">{stats.skipped}</div>
+          <div className="text-sm text-muted-foreground">Skipped</div>
+        </CardPanel>
+      </Card>
     </div>
   );
 }

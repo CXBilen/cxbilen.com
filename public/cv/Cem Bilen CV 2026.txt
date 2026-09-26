@@ -1,0 +1,50 @@
+Cem Bilen
+Software Engineer | Full-stack · AI-native
+CXBilen@gmail.com | +90 530 040 23 92 | Izmir, Türkiye
+Portfolio: https://cxbilen.com | GitHub: https://github.com/CXBilen
+LinkedIn: https://linkedin.com/in/cxbilen
+
+Summary
+Software engineer with a foundation in computer programming and databases. I build web products across frontend, backend and API integrations, using AI throughout development alongside architecture, code review and testing. My experience in UX, design systems and conversion optimization connects technical decisions to user needs and business goals.
+
+Technical Skills
+Technologies: TypeScript / JavaScript, React, Next.js, Node.js, PostgreSQL / SQL, Supabase, Tailwind CSS, Git / GitHub, Playwright / Vitest, Codex / Claude Code, Figma, GA4 / Funnels.
+Capabilities: Frontend Development, Backend Development, API Integration, Data Modeling, AI-assisted Development, Test Automation, UX / UI Design, Design Systems, CRO / A/B Testing, Product Thinking.
+
+Projects
+Surfel: SaaS product in development: full-stack application, APIs and data access, built with AI-assisted workflows.
+cxbilen.com: Next.js portfolio with shared theme tokens, responsive components, CV downloads and automated tests.
+SkyWise: Travel-assistant case study: typed React interfaces and interaction flows with simulated service integrations.
+
+Experience
+Senior UX Engineer | Efsora Labs
+Feb 2026 - Jul 2026 · Türkiye
+Led UX engineering and design systems across SaaS and web flows. Translated product requirements into user journeys, prototypes and implementation specifications, and standardized a design system of 40+ components.
+
+Senior CRO Executive | Digital House
+Mar 2025 - Jan 2026 · Istanbul
+Owned CRO and UX for web and e-commerce, turning funnel analysis into prioritized A/B tests that lifted conversion +12% and reduced checkout drop-off -16%.
+
+UX/UI Designer | Eva
+Sep 2023 - Aug 2024 · Izmir
+Designed end-to-end SaaS interfaces and Figma prototypes, simplifying complex flows into clear workflows and improving task-success in usability tests by +20%.
+
+Designer Project Manager | innoscripta AG
+May 2023 - Jul 2023 · Berlin
+
+UX/UI Designer | StudioMoco
+Dec 2022 - May 2023 · Nuremberg
+
+CRO Executive | Hype
+Apr 2022 - Sep 2022 · Istanbul
+
+Web Developer | İnce Fikirler
+Mar 2019 - Feb 2020 · Izmir
+
+Education
+Associate's, Computer Programming | Izmir University of Economics
+2014 - 2016
+Software development, web programming and database fundamentals.
+
+Database Interactive Programming | Ç. Altan Anatolian Technical HS
+2010 - 2014

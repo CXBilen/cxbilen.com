@@ -1,32 +1,25 @@
 import type { Metadata } from "next";
-import Background from "@/components/Background";
-import Card from "@/components/Card";
-import Sidebar from "@/components/cv/Sidebar";
+import Footer from "@/components/Footer";
 import CVMain from "@/components/cv/CVMain";
 import DownloadCV from "@/components/cv/DownloadCV";
 
 export const metadata: Metadata = {
   title: "CV",
   description:
-    "Curriculum vitae of Cem Bilen, Product Designer & Senior UX Engineer.",
+    "Cem Bilen: software engineer working across full-stack development, AI-native workflows, UX and conversion optimization.",
 };
 
 export default function CVPage() {
   return (
     <>
-      <Background />
-      <main className="mx-auto max-w-5xl px-6 pb-20 pt-12">
-        <div className="mb-6 flex items-center justify-between">
-          <h1 className="text-2xl font-extrabold text-heading">CV</h1>
+      <main className="mx-auto max-w-3xl px-6 pb-4 pt-12 sm:pt-16">
+        <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm font-medium text-muted-foreground">Curriculum vitae</p>
           <DownloadCV />
         </div>
-        <Card className="p-8">
-          <div className="flex flex-col gap-10 sm:flex-row">
-            <Sidebar />
-            <CVMain />
-          </div>
-        </Card>
+        <CVMain />
       </main>
+      <Footer />
     </>
   );
 }

@@ -1,26 +1,34 @@
 import type { Metadata } from "next";
-import Background from "@/components/Background";
 import ProjectCard from "@/components/ProjectCard";
-import SectionHeading from "@/components/SectionHeading";
+import Footer from "@/components/Footer";
 import { projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "Selected product design and UX engineering work.",
+  description:
+    "Selected full-stack development, frontend engineering and product work by Cem Bilen.",
 };
 
 export default function WorkIndex() {
   return (
     <>
-      <Background />
-      <main className="mx-auto max-w-5xl px-6 pb-20 pt-16">
-        <SectionHeading icon="star">Selected Work</SectionHeading>
-        <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <main className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-6 py-16">
+        <header className="flex flex-col gap-3">
+          <h1 className="text-4xl font-semibold tracking-tight">
+            Selected Work
+          </h1>
+          <p className="max-w-xl text-muted-foreground">
+            Full-stack applications, interfaces and the engineering decisions
+            behind them.
+          </p>
+        </header>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p) => (
             <ProjectCard key={p.slug} project={p} />
           ))}
         </div>
       </main>
+      <Footer />
     </>
   );
 }

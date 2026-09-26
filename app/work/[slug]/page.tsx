@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Background from "@/components/Background";
+import Footer from "@/components/Footer";
 import CaseStudy from "@/components/work/CaseStudy";
 import { projects, getProject } from "@/lib/projects";
 
@@ -29,8 +29,10 @@ export default async function WorkDetail({
   if (!project) notFound();
   return (
     <>
-      <Background />
-      <CaseStudy project={project} />
+      <main>
+        <CaseStudy project={project} />
+      </main>
+      <Footer />
     </>
   );
 }
