@@ -37,7 +37,7 @@ export const projects: Project[] = [
       },
       {
         heading: "Process",
-        body: "I use AI coding tools within a documented development process: define the scope, record architectural decisions, implement bounded changes, then review and verify them. Automated checks cover application code, database policies and browser behavior. The interface adapts COSS components into a shared system for navigation, forms and operational states.",
+        body: "I use AI coding tools within a documented development process: define the scope, record architectural decisions, implement bounded changes, then review and verify them. Automated checks cover application code, database policies and browser behavior. The interface uses a shared component system for navigation, forms and operational states.",
       },
       {
         heading: "Current state",
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     title: "cxbilen.com",
     tagline: "A portfolio and CV built with reusable React components and a shared theme system.",
     tags: ["Next.js", "React", "Frontend"],
-    cover: "/images/work/portfolio-coss-dark.png",
+    cover: "/images/work/portfolio-dark.png",
     year: "2026",
     role: "Frontend engineering · Design system · Content",
     status: "Live · Personal project",
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     sections: [
       {
         heading: "Engineering",
-        body: "React and TypeScript power the portfolio routes, reusable cards, navigation and CV. CSS variables and Tailwind share color and typography rules across light and dark themes. COSS supplies the default design tokens and component patterns. A single content source produces the web CV and single-column PDF, DOCX and text downloads, while route metadata and the sitemap support discoverability.",
+        body: "React and TypeScript power the portfolio routes, reusable cards, navigation and CV. CSS variables and Tailwind share color and typography rules across light and dark themes. Design tokens and reusable component patterns keep the interface consistent. A single content source produces the web CV and single-column PDF, DOCX and text downloads, while route metadata and the sitemap support discoverability.",
       },
       {
         heading: "Process",
@@ -76,7 +76,7 @@ export const projects: Project[] = [
         body: "The site is live and its source is public. It brings implementation, project documentation and the CV together in an application I maintain directly.",
       },
     ],
-    gallery: ["/images/work/portfolio-coss-dark.png", "/images/work/portfolio-coss-light.png"],
+    gallery: ["/images/work/portfolio-dark.png", "/images/work/portfolio-light.png"],
     links: [
       { label: "Visit website", href: "https://cxbilen.com" },
       { label: "View source", href: "https://github.com/CXBilen/cxbilen.com" },

@@ -1,6 +1,6 @@
 # CV export verification
 
-Last successful verification: **30 September 2026**.
+Last successful verification: **30 September 2026**, after the public-copy update. The current website and CV project copy describe reusable UI components without naming the underlying component registry.
 
 The CV uses a single column with body text in reading order, visible contact details and URLs, and the headings Summary, Technical Skills, Projects, Experience and Education. The canonical application file is `public/cv/Cem Bilen CV 2026.pdf`. An editable DOCX and plain text copy are also available. All nine selected projects appear in portfolio order, with implementation details and development/beta/simulated status where relevant. The exports use two A4 pages: technical profile and projects on page 1; experience and education on page 2. Body text is 11 pt with 14 mm margins. Actual employment titles, dates and education are preserved from `lib/cv.ts`.
 
@@ -10,11 +10,11 @@ Typography follows [COSS's default Inter preset](https://coss.com/ui/docs/get-st
 
 | Artifact in `public/cv` | File size | Pages | Result |
 | --- | ---: | ---: | --- |
-| `Cem Bilen CV 2026.pdf` | 49,068 bytes | 2 A4 | Pass |
-| `Cem Bilen CV 2026 Light.pdf` | 49,068 bytes | 2 A4 | Pass |
-| `Cem Bilen CV 2026 Dark.pdf` | 49,071 bytes | 2 A4 | Pass |
-| `Cem Bilen CV 2026.docx` | 367,987 bytes | 2 A4 in LibreOffice | Pass |
-| `Cem Bilen CV 2026.txt` | 3,652 bytes | Not applicable | Pass |
+| `Cem Bilen CV 2026.pdf` | 49,053 bytes | 2 A4 | Pass |
+| `Cem Bilen CV 2026 Light.pdf` | 49,053 bytes | 2 A4 | Pass |
+| `Cem Bilen CV 2026 Dark.pdf` | 49,056 bytes | 2 A4 | Pass |
+| `Cem Bilen CV 2026.docx` | 367,991 bytes | 2 A4 in LibreOffice | Pass |
+| `Cem Bilen CV 2026.txt` | 3,659 bytes | Not applicable | Pass |
 
 All **87 non-empty shared content fields** were found in both PDF text extractors, the DOCX body paragraphs, and TXT. Verification also passed for:
 
@@ -29,7 +29,7 @@ All **87 non-empty shared content fields** were found in both PDF text extractor
 The content source at verification had SHA-256:
 
 ```text
-adb4dc45e6b0b0b6788c6161b69a6ec3431b20405fa23caf4522c6702ee15399
+2a1d17484cc5c6fcc4cc9f2bb4e4066bd2534bd13e76518a4d812f745aec952f
 ```
 
 The canonical PDF, dark PDF and DOCX render were visually inspected for clipping, missing glyphs, overlap and spacing. Review images: white PDF [page 1](screenshots/cv-ats-pdf-light.png) / [page 2](screenshots/cv-ats-pdf-light-page-2.png), dark PDF [page 1](screenshots/cv-ats-pdf-dark.png) / [page 2](screenshots/cv-ats-pdf-dark-page-2.png), DOCX [page 1](screenshots/cv-ats-docx.png) / [page 2](screenshots/cv-ats-docx-page-2.png). DOCX was rendered with the bundled LibreOffice renderer; its resulting PDF uses only Inter fonts. These images record this verification run, so regenerate them after changing the content or layout.

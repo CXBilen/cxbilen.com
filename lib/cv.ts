@@ -111,7 +111,7 @@ export const cvData = {
     },
     {
       name: "cxbilen.com",
-      desc: "Live Next.js/TypeScript portfolio with COSS components, shared-source PDF/DOCX CV exports, component tests and browser checks.",
+      desc: "Live Next.js/TypeScript portfolio with reusable UI components, shared-source PDF/DOCX CV exports, component tests and browser checks.",
     },
     {
       name: "Dev Migration Assistant",

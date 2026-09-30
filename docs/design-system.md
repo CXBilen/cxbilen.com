@@ -4,6 +4,10 @@
 
 COSS defaults are the visual source of truth for cxbilen.com and its CV. This is the owner's explicit decision of 26 September 2026. Use the official components, semantic colors, typography, spacing and interaction patterns when implementing or maintaining the site.
 
+## Public presentation
+
+The owner's direction of 30 September 2026 keeps the implementation choice private in public-facing marketing. Website and CV copy, Bionluk descriptions, metadata, alt text and public asset filenames describe the design system and component work without naming COSS. This does not change the implementation or authorize claims that third-party primitives were authored from scratch. Keep source attribution, licenses and third-party notices intact; this document retains the technical source for maintenance.
+
 The source is the distributed **COSS style preset and component registry**, pinned to commit [`59e8c88c4be28cbfdd9eb3cd7274c60ffa91413e`](https://github.com/cosscom/coss/blob/59e8c88c4be28cbfdd9eb3cd7274c60ffa91413e). Preserve this revision until an intentional upstream update is made and verified.
 
 ## Authoritative sources

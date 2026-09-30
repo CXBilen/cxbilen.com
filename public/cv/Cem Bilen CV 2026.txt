@@ -13,7 +13,7 @@ Capabilities: Frontend Development, Backend Development, API Integration, Data M
 
 Projects
 Surfel: SaaS in development: Next.js/TypeScript monorepo, PostgreSQL data models, role-based access, APIs, webhooks and background jobs.
-cxbilen.com: Live Next.js/TypeScript portfolio with COSS components, shared-source PDF/DOCX CV exports, component tests and browser checks.
+cxbilen.com: Live Next.js/TypeScript portfolio with reusable UI components, shared-source PDF/DOCX CV exports, component tests and browser checks.
 Dev Migration Assistant: Released Electron/React desktop tool for Git working state and AI context migration; typed IPC, encrypted archives and checksum-verified restore.
 PlayAgain: Browser gaming application with Next.js, WebRTC, WebSocket and Redis; phone controllers, QR room pairing and save-state APIs.
 Looplift: Next.js/Supabase beta for AI-assisted conversion audits; versioned experiment patches, human approval, measurement guardrails and rollback.

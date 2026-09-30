@@ -16,3 +16,9 @@ The user selected the official COSS defaults as the source of truth for this sit
 - Keep the web CV and exported CV consistent in content, font and palette. Preserve semantic single-column reading order and selectable text in the ATS export.
 - Preserve upstream attribution in `THIRD_PARTY_NOTICES.md` when copying or updating registry source.
 - Apply these rules directly during authorized implementation and fixes. A later explicit user design direction updates this document and `docs/design-system.md`.
+
+## Public copy
+
+- The owner's direction of 30 September 2026 keeps the design-system implementation choice private in marketing. Do not name COSS in the public website, CV, Bionluk listing or portfolio copy, public asset filenames, alt text or metadata.
+- Describe the delivered design system, reusable components and developer experience without claiming third-party primitives were authored from scratch.
+- Preserve required license attribution and notices in source files, licenses and `THIRD_PARTY_NOTICES.md`. Internal implementation documentation can retain the technical source and pinned revision.

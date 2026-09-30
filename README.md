@@ -22,7 +22,7 @@
 - ⚡ **Portfolio-first** — hero, selected work grid, and per-project case studies
 - 🌓 **Auto dark / light** — follows system preference with a manual toggle
 - 📄 **Native CV** — single-column CV with PDF, DOCX and text downloads
-- 🎨 **One design system** — official COSS default tokens, Inter and Geist Mono across site and CV
+- 🎨 **One design system** — shared design tokens, Inter and Geist Mono across site and CV
 - 📱 **Responsive** — single-column CV that reflows on mobile
 - 🔎 **SEO-ready** — metadata, Open Graph, sitemap, and robots out of the box
 
@@ -48,7 +48,7 @@ Open [http://localhost:3000](http://localhost:3000).
 - [Next.js 15](https://nextjs.org/) (App Router) + [React 19](https://react.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS v4](https://tailwindcss.com/)
-- [COSS UI](https://coss.com/ui/docs) + [Base UI](https://base-ui.com/)
+- Reusable UI components with [Base UI](https://base-ui.com/) interaction primitives
 - [next-themes](https://github.com/pacocoursey/next-themes)
 - [Vitest](https://vitest.dev/) + [Testing Library](https://testing-library.com/)
 
@@ -85,7 +85,7 @@ All exports preserve one-column reading order, standard headings and selectable 
 
 Run `python3 scripts/verify-cv.py` after exporting; see [CV verification](docs/cv-verification.md) for dependencies, checks and recorded results.
 
-See [Design system](docs/design-system.md) for the pinned COSS sources and [Third-party notices](THIRD_PARTY_NOTICES.md) for attribution.
+See [Design system](docs/design-system.md) for implementation guidance and [Third-party notices](THIRD_PARTY_NOTICES.md) for attribution.
 
 ## ▲ Deploy
 
