@@ -95,6 +95,12 @@ The selected primitives use `@base-ui/react`, `class-variance-authority`, `clsx`
 
 Keep the body positioned relatively and the application root isolated for Base UI layering. Use ordinary responsive layout utilities for page composition; let COSS primitives own component geometry and visual states. Honor reduced motion and visible keyboard focus.
 
+### Header theme control
+
+The header uses the same `LayerMask01Icon` from Hugeicons as the pinned [COSS ModeSwitcher](https://github.com/cosscom/coss/blob/59e8c88c4be28cbfdd9eb3cd7274c60ffa91413e/packages/ui/src/shared/mode-switcher.tsx), rendered at `size-4`, rotated `-rotate-45`, with stroke width 2 inside a `size-8` ghost Button. The icon pack is pinned to upstream's `@hugeicons/core-free-icons@2.0.0`; the MIT React renderer is `@hugeicons/react@1.1.10`, which supports this app's React version.
+
+The local theme logic cycles System → Dark → Light → System. System is the default and follows the device preference; explicit choices persist across reloads. The accessible name and hover title describe the current mode and next action. This is application composition using the MIT icon packages and existing MIT Button; the AGPL shared COSS component is a visual reference.
+
 ## CV and ATS export
 
 The web CV and downloadable CV share the same professional content, Inter typography and semantic neutral palette. The PDF exporter may resolve theme variables into browser-ready CSS while preserving their visual values.
