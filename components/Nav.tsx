@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import brandIcon from "@/app/icon.png";
 import ThemeToggle from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 
@@ -14,13 +16,14 @@ export default function Nav() {
           className="flex items-center gap-2.5 font-semibold tracking-tight"
           aria-label="Home"
         >
-          <span
-            className="flex size-7 items-center justify-center rounded-lg border bg-muted font-mono text-xs"
-            aria-hidden="true"
-          >
-            cb
-          </span>
-          <span>Cem Bilen</span>
+          <Image
+            src={brandIcon}
+            alt=""
+            width={28}
+            height={28}
+            className="size-7 shrink-0"
+          />
+          <span>CXBilen</span>
         </Link>
         <div className="flex items-center gap-1">
           <Button variant="ghost" render={<Link href="/work" />}>
