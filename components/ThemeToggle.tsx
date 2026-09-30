@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { LayerMask01Icon } from "@hugeicons/core-free-icons";
+import { ComputerIcon, Moon02Icon, Sun03Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Button } from "@/components/ui/button";
 
@@ -20,6 +20,12 @@ export default function ThemeToggle() {
         : "system";
   const labels = { system: "System", dark: "Dark", light: "Light" };
   const label = `Toggle theme: ${labels[currentTheme]}. Switch to ${labels[nextTheme]}.`;
+  const icon =
+    currentTheme === "system"
+      ? ComputerIcon
+      : currentTheme === "dark"
+        ? Moon02Icon
+        : Sun03Icon;
   return (
     <Button
       className="relative size-8"
@@ -31,8 +37,8 @@ export default function ThemeToggle() {
     >
       <HugeiconsIcon
         aria-hidden="true"
-        className="size-4 -rotate-45"
-        icon={LayerMask01Icon}
+        className="size-4"
+        icon={icon}
         strokeWidth={2}
       />
     </Button>

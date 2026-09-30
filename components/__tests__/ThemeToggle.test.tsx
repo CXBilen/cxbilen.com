@@ -26,18 +26,27 @@ describe("ThemeToggle", () => {
     );
     const button = screen.getByRole("button", { name: /toggle theme/i });
     expect(button).toHaveAccessibleName(/system/i);
+    const iconShape = () =>
+      Array.from(button.querySelectorAll("svg path"), (path) => path.getAttribute("d"));
+    const systemIcon = iconShape();
 
     fireEvent.click(button);
     expect(localStorage.getItem("theme")).toBe("dark");
     expect(document.documentElement).toHaveClass("dark");
+    const darkIcon = iconShape();
+    expect(darkIcon).not.toEqual(systemIcon);
 
     fireEvent.click(button);
     expect(localStorage.getItem("theme")).toBe("light");
     expect(document.documentElement).toHaveClass("light");
+    const lightIcon = iconShape();
+    expect(lightIcon).not.toEqual(systemIcon);
+    expect(lightIcon).not.toEqual(darkIcon);
 
     fireEvent.click(button);
     expect(localStorage.getItem("theme")).toBe("system");
     expect(button).toHaveAccessibleName(/system/i);
+    expect(iconShape()).toEqual(systemIcon);
   });
 
   it("resumes a saved light preference and returns to system on the next click", () => {
