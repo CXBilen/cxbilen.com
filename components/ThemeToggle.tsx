@@ -2,26 +2,38 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { MoonIcon, SunIcon } from "lucide-react";
+import { MonitorIcon, MoonIcon, SunIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
-  const isDark = mounted && resolvedTheme === "dark";
+  const currentTheme =
+    mounted && (theme === "dark" || theme === "light") ? theme : "system";
+  const nextTheme =
+    currentTheme === "system"
+      ? "dark"
+      : currentTheme === "dark"
+        ? "light"
+        : "system";
+  const labels = { system: "System", dark: "Dark", light: "Light" };
+  const label = `Toggle theme: ${labels[currentTheme]}. Switch to ${labels[nextTheme]}.`;
+  const Icon =
+    currentTheme === "system"
+      ? MonitorIcon
+      : currentTheme === "dark"
+        ? MoonIcon
+        : SunIcon;
   return (
     <Button
       variant="ghost"
       size="icon"
-      aria-label="Toggle theme"
-      onClick={() => setTheme(isDark ? "light" : "dark")}
+      aria-label={label}
+      title={label}
+      onClick={() => setTheme(nextTheme)}
     >
-      {isDark ? (
-        <SunIcon aria-hidden="true" />
-      ) : (
-        <MoonIcon aria-hidden="true" />
-      )}
+      <Icon aria-hidden="true" />
     </Button>
   );
 }
