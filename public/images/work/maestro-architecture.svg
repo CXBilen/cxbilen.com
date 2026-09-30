@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" fill="none">
+  <title>Maestro application architecture</title>
+  <desc>A Next.js workspace connects to a Bun worker and agent execution. PostgreSQL persists project and artifact data; Redis Streams supports queued jobs.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M2 2L5 5L2 8" stroke="#737373" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect width="1440" height="900" fill="#fafafa"/>
+  <g font-family="Inter, sans-serif" fill="#262626">
+    <text x="96" y="124" font-size="48" font-weight="600">Maestro</text>
+    <text x="96" y="174" font-size="24" fill="#737373">Agent execution with project context and human review</text>
+    <g fill="white" stroke="#e5e5e5" stroke-width="2">
+      <rect x="96" y="268" width="352" height="186" rx="16"/>
+      <rect x="544" y="268" width="352" height="186" rx="16"/>
+      <rect x="992" y="268" width="352" height="186" rx="16"/>
+      <rect x="320" y="584" width="352" height="146" rx="16"/>
+      <rect x="768" y="584" width="352" height="146" rx="16"/>
+    </g>
+    <g fill="none" stroke="#737373" stroke-width="2" marker-end="url(#arrow)">
+      <path d="M448 360H524"/>
+      <path d="M896 360H972"/>
+      <path d="M720 454V526H496V564"/>
+      <path d="M720 526H944V564"/>
+    </g>
+    <g font-size="28" font-weight="600">
+      <text x="128" y="324">Next.js workspace</text>
+      <text x="576" y="324">Bun worker</text>
+      <text x="1024" y="324">Agent execution</text>
+      <text x="352" y="640">PostgreSQL</text>
+      <text x="800" y="640">Redis Streams</text>
+    </g>
+    <g font-size="22" fill="#737373">
+      <text x="128" y="370">Projects and run controls</text>
+      <text x="128" y="408">Streamed output and review</text>
+      <text x="576" y="370">Job lifecycle and runners</text>
+      <text x="576" y="408">Typed execution contracts</text>
+      <text x="1024" y="370">Context and instructions</text>
+      <text x="1024" y="408">Logs and generated artifacts</text>
+      <text x="352" y="684">Projects, runs and artifacts</text>
+      <text x="800" y="684">Queues and execution state</text>
+    </g>
+    <text x="96" y="816" font-size="22" fill="#737373">Scope → Run → Review → Approve</text>
+  </g>
+</svg>

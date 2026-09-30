@@ -6,6 +6,7 @@ export type Project = {
   tagline: string;
   tags: string[];
   cover: string;
+  coverAlt?: string;
   year: string;
   role: string;
   problem: string;
@@ -82,6 +83,125 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "dev-migration-assistant",
+    title: "Dev Migration Assistant",
+    tagline: "An encrypted macOS backup tool for Git working state, local project files and AI coding context.",
+    tags: ["Electron", "TypeScript", "Node.js"],
+    cover: "/images/work/dev-migration-home.png",
+    year: "2026",
+    role: "Desktop engineering · Application architecture · Developer tooling",
+    status: "Open source · macOS release v1.0.0",
+    imageNote: "Early development preview screenshots from the public repository.",
+    problem:
+      "Moving to another Mac can leave behind uncommitted code, Git worktrees, local configuration and AI coding sessions. I built Dev Migration Assistant to capture that working context in one encrypted archive and restore it with a reviewable plan for the destination machine.",
+    sections: [
+      {
+        heading: "Engineering",
+        body: "An Electron application pairs a React and TypeScript interface with Node.js backup and restore engines. A typed IPC boundary connects the interface to native dialogs and filesystem operations. Separate providers collect Git state, Claude Code context, selected project files and runtime information, while the archive layer streams data through Argon2id key derivation and AES-256-GCM encryption.",
+      },
+      {
+        heading: "Restore and verification",
+        body: "The restore workflow inspects the archive, maps project locations, checks conflicts and shows the planned writes before execution. Path remapping, checksum verification and scoped filesystem access support the migration. Unit tests, integration tests using real Git repositories and Playwright Electron checks accompany documented architecture and backup format decisions.",
+      },
+      {
+        heading: "Source and release",
+        body: "The MIT-licensed source and v1.0.0 release are public on GitHub. The application targets macOS on Apple Silicon and keeps backup processing local. The images show an earlier interface preview; the repository documents the released backup and restore implementation.",
+      },
+    ],
+    gallery: ["/images/work/dev-migration-home.png", "/images/work/dev-migration-backup.png"],
+    links: [
+      { label: "View source", href: "https://github.com/CXBilen/dev-migration-assistant" },
+      { label: "Download macOS release", href: "https://github.com/CXBilen/dev-migration-assistant/releases/tag/v1.0.0" },
+    ],
+  },
+  {
+    slug: "playagain",
+    title: "PlayAgain",
+    tagline: "A browser gaming application that connects a TV or desktop screen with phones as controllers.",
+    tags: ["Next.js", "WebRTC", "WebSockets"],
+    cover: "/images/work/playagain-landing.png",
+    year: "2026",
+    role: "Full-stack engineering · Realtime systems · Interaction design",
+    status: "Web application · Personal project",
+    imageNote: "Development screenshots from the project repository, including a local pairing room.",
+    problem:
+      "Playing together across a shared screen and personal phones requires a clear pairing flow, responsive input and reliable connection handling. I built PlayAgain around a host screen, mobile controllers and browser-based emulation, bringing those separate device roles into one application.",
+    sections: [
+      {
+        heading: "Engineering",
+        body: "Next.js and TypeScript provide the host, controller and API routes. Browser clients handle emulation, rendering and audio; the realtime layer connects room membership and controller input through WebSockets, WebRTC and Redis pub/sub. QR pairing, room tokens, input protocols and connection state management support the interaction between devices.",
+      },
+      {
+        heading: "Device experience",
+        body: "The host interface supports large screens and gamepad navigation, while the mobile interface provides touch controls and paired gamepad input. A controller-run mode lets the phone run the emulator and stream video and audio to the host. Authentication, Google Drive library routes and save-state handling sit alongside the gameplay interface.",
+      },
+      {
+        heading: "Verification",
+        body: "The repository includes tests for binary input protocols, connection state, host and controller behavior, and transport switching. The screenshots show the landing page, a development pairing lobby and the phone controller interface.",
+      },
+    ],
+    gallery: ["/images/work/playagain-lobby.png", "/images/work/playagain-controller.png"],
+    links: [{ label: "Visit PlayAgain", href: "https://www.playagain.app" }],
+  },
+  {
+    slug: "looplift",
+    title: "Looplift",
+    tagline: "An AI-assisted experimentation platform connecting storefront audits, variant generation and A/B testing.",
+    tags: ["Full-stack", "AI workflows", "CRO"],
+    cover: "/images/work/looplift-home.png",
+    year: "2026",
+    role: "Full-stack engineering · AI workflows · Conversion optimization",
+    status: "Private beta",
+    imageNote: "Public landing page with illustrative experiment data, captured in September 2026.",
+    problem:
+      "Shopify merchants need to turn conversion findings into experiments they can review, launch and evaluate. I built Looplift around that workflow, connecting evidence collection, AI-assisted recommendations, generated variants and explicit human approval.",
+    sections: [
+      {
+        heading: "Engineering",
+        body: "The Next.js and TypeScript application uses Supabase for authentication and PostgreSQL data. An audit pipeline collects storefront evidence, analyzes pages and synthesizes findings. Variant generation produces versioned declarative patch sets, while an experiment lifecycle connects approval, delivery, measurement, guardrails and rollback.",
+      },
+      {
+        heading: "Product decisions",
+        body: "Opportunities persist as distinct product records so audits and proposals can build on the same finding. Merchants review each generated change before launch. The current delivery uses a JavaScript snippet and client-side measurement, with interfaces for comparing variants and tracking the experiment state.",
+      },
+      {
+        heading: "Current state",
+        body: "The project is in private beta. The audit-to-launch workflow and experiment controls are implemented. The documented evidence has not yet established a statistically conclusive experiment or a proven learning loop; those outcomes need further usage and validation.",
+      },
+    ],
+    gallery: [],
+    links: [{ label: "Visit Looplift", href: "https://www.looplift.io" }],
+  },
+  {
+    slug: "maestro",
+    title: "Maestro",
+    tagline: "A project workspace for agent execution, streamed output and reviewable engineering artifacts.",
+    tags: ["AI agents", "Bun", "PostgreSQL"],
+    cover: "/images/work/maestro-architecture.svg",
+    coverAlt: "Maestro architecture: Next.js workspace, Bun worker, agent execution, PostgreSQL and Redis Streams",
+    year: "2026",
+    role: "Application architecture · Agent orchestration · Full-stack engineering",
+    status: "Engineering project · Private source",
+    imageNote: "Architecture diagram based on the implementation in the repository.",
+    problem:
+      "AI-generated work needs project context, execution state and a place to review the result. I developed Maestro as a workspace that connects project goals to agent runs, streamed output, persisted artifacts and review decisions.",
+    sections: [
+      {
+        heading: "Engineering",
+        body: "A Next.js and TypeScript workspace connects to a Bun worker and execution adapters. PostgreSQL stores project and run records, while Redis supports streams, locks and queue operations. Authenticated server routes stream execution output through Server-Sent Events, keeping the interface connected to the worker lifecycle.",
+      },
+      {
+        heading: "Execution and review",
+        body: "The orchestration layer defines explicit transitions from creation and scoping through execution, generated output and review. Shared contracts connect job types, runners, logs and artifacts. Review actions let a person approve, edit or reject the resulting work, with state transitions represented in the application.",
+      },
+      {
+        heading: "Project scope",
+        body: "The repository includes component generation, UX audit and design-system job types, workspace management and infrastructure configuration. This case study presents the implemented application structure and execution workflow. The cover illustrates those system boundaries.",
+      },
+    ],
+    gallery: [],
+  },
+  {
     slug: "skywise",
     title: "SkyWise",
     tagline: "A travel assistant case study that turns user journeys into an interactive Next.js prototype.",
@@ -113,6 +233,64 @@ export const projects: Project[] = [
       "/images/work/skywise-import.png",
     ],
     links: [{ label: "View source and case study", href: "https://github.com/CXBilen/skywise" }],
+  },
+  {
+    slug: "lenz",
+    title: "LENZ",
+    tagline: "An AI virtual try-on application connecting a shopping interface with image generation and merchant APIs.",
+    tags: ["Full-stack", "Generative AI", "Supabase"],
+    cover: "/images/work/lenz-home.png",
+    year: "2025",
+    role: "Full-stack development · AI integration · E-commerce UX",
+    status: "Live website · Personal project",
+    imageNote: "Public landing page captured in September 2026.",
+    problem:
+      "Virtual try-on needs more than an image generation screen: shoppers need a clear photo and garment flow, while merchants need authentication, usage controls and an integration surface. I built Lenz to connect that user experience with the application logic and services behind it.",
+    sections: [
+      {
+        heading: "Engineering",
+        body: "The application uses Next.js, React and TypeScript with Supabase for identity and relational data. Server routes assemble photo and garment inputs for Google Gemini image generation. Merchant API routes add API authentication, request validation, rate limiting, billing checks and usage tracking around the try-on workflow.",
+      },
+      {
+        heading: "Product workflows",
+        body: "The frontend covers photo capture, garment selection, generated results and try-on history. The codebase also contains merchant widgets, Shopify integration routes and Polar billing webhooks. These application boundaries connect the shopping experience to merchant configuration and account operations.",
+      },
+      {
+        heading: "Current presentation",
+        body: "The public website introduces the try-on product and provides account and demo entry points. The implementation connects the try-on interface, image generation routes and merchant account operations in one application.",
+      },
+    ],
+    gallery: [],
+    links: [{ label: "Visit Lenz", href: "https://lenz.style" }],
+  },
+  {
+    slug: "zedrift",
+    title: "ZEDrift",
+    tagline: "A browser-based 3D driving game with procedural city generation and realtime multiplayer state.",
+    tags: ["Three.js", "Socket.IO", "Node.js"],
+    cover: "/images/work/zedrift-city-plan.png",
+    coverAlt: "ZEDrift city map asset showing streets and buildings from above",
+    year: "2025",
+    role: "3D frontend development · Realtime backend · Game interactions",
+    status: "Game project · Private source",
+    imageNote: "City map asset from the project repository.",
+    problem:
+      "A multiplayer driving game must connect a responsive local scene with shared player state and understandable controls. I built ZEDrift around a browser-rendered city, drift and boost interactions, and a Node.js server that coordinates the connected players.",
+    sections: [
+      {
+        heading: "Rendering and interaction",
+        body: "React, TypeScript and Three.js form the browser client. Separate modules handle procedural city generation, driving and drift physics, gravity and tire marks. The interface combines a game HUD, player list, chat, minimap and connection states around the rendered scene.",
+      },
+      {
+        heading: "Realtime backend",
+        body: "An Express and Socket.IO server manages gameplay connections and multiplayer events. PostgreSQL and Prisma support account data, with JWT and Google OAuth authentication. Client and server applications have their own container and Fly.io configuration.",
+      },
+      {
+        heading: "Project scope",
+        body: "The source separates rendering and game physics from server-side account and connection handling. The cover is a city map asset used by the project; it shows the spatial setting behind the driving experience.",
+      },
+    ],
+    gallery: [],
   },
 ];
 

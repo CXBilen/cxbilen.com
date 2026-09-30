@@ -21,7 +21,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div className="relative aspect-[16/10] w-full overflow-hidden border-b bg-muted">
           <Image
             src={project.cover}
-            alt={`${project.title} interface`}
+            alt={project.coverAlt ?? `${project.title} interface`}
             fill
             className="object-cover object-top"
             sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
@@ -48,9 +48,9 @@ export default function ProjectCard({ project }: { project: Project }) {
           </CardDescription>
         </CardHeader>
         <CardPanel className="flex items-end">
-          <div className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap gap-2">
             {project.tags.map((tag) => (
-              <Badge key={tag} variant="secondary">
+              <Badge key={tag} size="lg" variant="secondary">
                 {tag}
               </Badge>
             ))}

@@ -27,9 +27,9 @@ export default function CaseStudy({ project }: { project: Project }) {
         {project.status && (
           <p className="text-sm font-medium">{project.status}</p>
         )}
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
-            <Badge key={tag} variant="secondary">
+            <Badge key={tag} size="lg" variant="secondary">
               {tag}
             </Badge>
           ))}
@@ -59,7 +59,7 @@ export default function CaseStudy({ project }: { project: Project }) {
         <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border bg-muted">
           <Image
             src={project.cover}
-            alt={`${project.title} interface`}
+            alt={project.coverAlt ?? `${project.title} interface`}
             fill
             className="object-cover object-top"
             sizes="(max-width: 767px) 100vw, 720px"

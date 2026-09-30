@@ -89,6 +89,8 @@ The local component copies come from the pinned MIT-licensed `apps/ui` registry.
 | Card | Semantic card surface; 1px border; `shadow-xs/5`; subtle light/dark edge shadows. Header, panel and footer provide their own padding. Title uses heading font, semibold, `text-lg` and `leading-none`; description uses muted `text-sm`. |
 | Badge | Medium weight, compact responsive height, semantic variants and `rounded-sm`. Use the component's size options so labels and icons retain the intended proportions. |
 
+Project technology tags use the official Badge `size="lg"` variant with `gap-2` between items, as requested on 30 September 2026. This provides 26px height on mobile, 22px on desktop and 5px horizontal padding without changing the registry primitive or its default sizing.
+
 The official [card particle](https://github.com/cosscom/coss/blob/59e8c88c4be28cbfdd9eb3cd7274c60ffa91413e/apps/ui/registry/default/particles/p-card-1.tsx) composes `CardHeader`, `CardTitle`, `CardDescription`, `CardPanel` and `CardFooter` inside `Card`. Add layout classes around this structure as needed. The [button particle](https://github.com/cosscom/coss/blob/59e8c88c4be28cbfdd9eb3cd7274c60ffa91413e/apps/ui/registry/default/particles/p-button-1.tsx) uses the default primitive directly. A navigation link can use `Button` with `render={<Link href="…" />}` as documented by COSS.
 
 The selected primitives use `@base-ui/react`, `class-variance-authority`, `clsx`, `tailwind-merge` and `lucide-react` through the loading spinner. Follow the lockfile for installed versions. Adapt local import paths while retaining upstream behavior and styling.

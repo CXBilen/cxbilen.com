@@ -36,7 +36,7 @@ export default function Home() {
           <div className="flex items-baseline justify-between gap-4">
             <SectionHeading>Selected Work</SectionHeading>
             <span className="font-mono text-xs text-muted-foreground">
-              01 — 03
+              01 — {String(projects.length).padStart(2, "0")}
             </span>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

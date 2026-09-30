@@ -2,10 +2,10 @@ import { describe, it, expect } from "vitest";
 import { projects, getProject } from "@/lib/projects";
 
 describe("projects data", () => {
-  it("has the three selected projects with unique slugs", () => {
+  it("has unique, nonempty project slugs", () => {
     const slugs = projects.map((p) => p.slug);
-    expect(slugs).toEqual(["surfel", "cxbilen-com", "skywise"]);
-    expect(new Set(slugs).size).toBe(3);
+    expect(slugs.every((slug) => slug.length > 0)).toBe(true);
+    expect(new Set(slugs).size).toBe(slugs.length);
   });
 
   it("every project has a tagline, cover, and at least one section", () => {
