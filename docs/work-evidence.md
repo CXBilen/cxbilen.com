@@ -46,4 +46,4 @@ Reviewed on 30 September 2026. Project descriptions are grounded in the owner's 
 
 ## Badge presentation
 
-The local Badge source matches the pinned COSS registry. The live COSS docs and this site both render default desktop badges at 18px height, 12px font and 3px horizontal padding. Project cards and case-study tags now use COSS's documented `lg` size: 22px height and 5px horizontal padding on desktop, 26px height on mobile. Their layout uses an 8px gap. The primitive source remains pinned and unchanged.
+The local Badge source matches the pinned COSS registry. Default desktop badges use 18px height, 12px font and 3px horizontal padding. Following the owner's clarification on 30 September 2026, project cards and case-study tags retain the default height and font (18px/12px on desktop, 22px/14px on mobile) and add `px-2` for 8px horizontal padding. Their layout uses an 8px gap. This corrects the earlier `lg` implementation, which increased badge height and text size. The primitive source remains pinned and unchanged.

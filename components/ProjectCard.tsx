@@ -50,7 +50,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         <CardPanel className="flex items-end">
           <div className="flex flex-wrap gap-2">
             {project.tags.map((tag) => (
-              <Badge key={tag} size="lg" variant="secondary">
+              <Badge key={tag} variant="secondary" className="px-2">
                 {tag}
               </Badge>
             ))}
