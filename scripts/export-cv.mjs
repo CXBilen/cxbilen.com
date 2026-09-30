@@ -38,26 +38,29 @@ const html = `<!DOCTYPE html>
   :root[data-theme="dark"] { --background: #161616; --foreground: #f5f5f5; --muted-foreground: #818181; --border: #242424; }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
-  body { font: 400 10.5pt/1.24 Inter, Arial, sans-serif; color: var(--foreground); background: var(--background); font-variant-ligatures: none; font-feature-settings: "calt" 0, "liga" 0; }
-  .cv { max-width: 210mm; margin: 0 auto; padding: 12mm; }
+  body { font: 400 11pt/1.35 Inter, Arial, sans-serif; color: var(--foreground); background: var(--background); font-variant-ligatures: none; font-feature-settings: "calt" 0, "liga" 0; }
+  .cv { max-width: 210mm; margin: 0 auto; padding: 14mm; }
   h1 { font-size: 25pt; line-height: 1.1; margin: 0 0 3pt; font-weight: 700; letter-spacing: -.035em; }
   .role { font-size: 11.5pt; margin: 0 0 6pt; }
   .contact { font-style: normal; }
   .contact p { margin: 0; }
   a { color: inherit; text-decoration: none; }
-  h2 { font-size: 11.5pt; line-height: 1.2; font-weight: 700; margin: 9pt 0 4pt; padding: 0; }
-  h3 { font-size: 10.5pt; line-height: 1.24; font-weight: 700; margin: 0; }
+  h2 { font-size: 11.5pt; line-height: 1.2; font-weight: 700; margin: 12pt 0 5pt; padding: 0; }
+  h3 { font-size: 11pt; line-height: 1.35; font-weight: 700; margin: 0; }
   p { margin: 0; }
   .period { color: var(--muted-foreground); font-weight: 400; }
   .entry { margin-top: 5pt; break-inside: avoid; }
   .entry:first-of-type { margin-top: 0; }
   .entry p + p { margin-top: 2pt; }
   .skills p + p { margin-top: 3pt; }
-  .projects p + p { margin-top: 4pt; }
+  .skill { white-space: nowrap; }
+  .projects p { break-inside: avoid; }
+  .projects p + p { margin-top: 6pt; }
+  .experience { break-before: page; }
   h2, h3 { break-after: avoid; }
   p { orphans: 2; widows: 2; }
   .theme-toggle { position: fixed; top: 16px; right: 16px; border: 1px solid var(--border); padding: 9px 12px; border-radius: .625rem; background: var(--background); color: var(--foreground); font: 400 12px/1 Inter,sans-serif; cursor: pointer; }
-  @page { size: A4; margin: 12mm; background: var(--background); }
+  @page { size: A4; margin: 14mm; background: var(--background); }
   @media print { html { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .cv { width: auto; max-width: none; margin: 0; padding: 0; } .theme-toggle { display: none; } }
   @media screen and (max-width: 700px) { .cv { padding: 28px 20px; } .theme-toggle { position: static; margin: 0 20px 20px; } }
 </style>
@@ -77,14 +80,14 @@ const html = `<!DOCTYPE html>
   </section>
   <section class="skills">
     <h2>Technical Skills</h2>
-    <p><strong>Technologies:</strong> ${cvData.tools.map(escape).join(", ")}.</p>
-    <p><strong>Capabilities:</strong> ${cvData.skills.map(escape).join(", ")}.</p>
+    <p><strong>Technologies:</strong> ${cvData.tools.map((item) => `<span class="skill">${escape(item)}</span>`).join(", ")}.</p>
+    <p><strong>Capabilities:</strong> ${cvData.skills.map((item) => `<span class="skill">${escape(item)}</span>`).join(", ")}.</p>
   </section>
   <section class="projects">
     <h2>Projects</h2>
     ${cvData.selectedWork.map((item) => `<p><strong>${escape(item.name)}:</strong> ${escape(item.desc)}</p>`).join("\n    ")}
   </section>
-  <section>
+  <section class="experience">
     <h2>Experience</h2>
     ${entries(cvData.experience)}
   </section>

@@ -36,7 +36,7 @@ def font(style, size, bold=False):
         rf.set(qn(f"w:{kind}"), "Inter")
     style.paragraph_format.space_before = Pt(0)
     style.paragraph_format.space_after = Pt(0)
-    style.paragraph_format.line_spacing = Pt(13.02)
+    style.paragraph_format.line_spacing = Pt(14.85)
 
 
 def embed_fonts(filename):
@@ -85,16 +85,16 @@ def embed_fonts(filename):
 doc = Document()
 section = doc.sections[0]
 section.page_width, section.page_height = Mm(210), Mm(297)
-section.top_margin = section.bottom_margin = section.left_margin = section.right_margin = Mm(12)
-font(doc.styles["Normal"], 10.5)
+section.top_margin = section.bottom_margin = section.left_margin = section.right_margin = Mm(14)
+font(doc.styles["Normal"], 11)
 font(doc.styles["Title"], 25, True)
 doc.styles["Title"].paragraph_format.line_spacing = Pt(27.5)
 doc.styles["Title"].paragraph_format.space_after = Pt(3)
 font(doc.styles["Heading 1"], 11.5, True)
-doc.styles["Heading 1"].paragraph_format.space_before = Pt(9)
-doc.styles["Heading 1"].paragraph_format.space_after = Pt(4)
+doc.styles["Heading 1"].paragraph_format.space_before = Pt(12)
+doc.styles["Heading 1"].paragraph_format.space_after = Pt(5)
 doc.styles["Heading 1"].paragraph_format.keep_with_next = True
-font(doc.styles["Heading 2"], 10.5, True)
+font(doc.styles["Heading 2"], 11, True)
 doc.styles["Heading 2"].paragraph_format.keep_with_next = True
 # No tables, text boxes, images, headers, or footers: every item is a body paragraph.
 # Clear built-in Word theme font/color references and title-rule residue.
@@ -147,8 +147,8 @@ labelled("Technologies", ", ".join(DATA["tools"]) + ".")
 labelled("Capabilities", ", ".join(DATA["skills"]) + ".", before=3)
 p("Projects", "Heading 1")
 for i, item in enumerate(DATA["selectedWork"]):
-    labelled(item["name"], item["desc"], before=4 if i else 0)
-p("Experience", "Heading 1")
+    labelled(item["name"], item["desc"], before=6 if i else 0).paragraph_format.keep_together = True
+p("Experience", "Heading 1").paragraph_format.page_break_before = True
 for i, item in enumerate(DATA["experience"]):
     title = p(style="Heading 2", before=5 if i else 0)
     title.add_run(plain(f'{item["role"]} | {item["company"]} ')).bold = True

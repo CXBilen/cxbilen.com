@@ -18,6 +18,8 @@ export const cvData = {
     "API Integration",
     "Data Modeling",
     "AI-assisted Development",
+    "AI API Integration",
+    "Realtime Applications",
     "Test Automation",
     "UX / UI Design",
     "Design Systems",
@@ -29,8 +31,12 @@ export const cvData = {
     "React",
     "Next.js",
     "Node.js",
+    "Bun / Electron",
     "PostgreSQL / SQL",
+    "Redis",
     "Supabase",
+    "WebRTC / WebSocket / Socket.IO",
+    "Google Gemini API",
     "Tailwind CSS",
     "Git / GitHub",
     "Playwright / Vitest",
@@ -39,7 +45,7 @@ export const cvData = {
     "GA4 / Funnels",
   ],
   about:
-    "Software engineer with a foundation in computer programming and databases. I build web products across frontend, backend and API integrations, using AI throughout development alongside architecture, code review and testing. My experience in UX, design systems and conversion optimization connects technical decisions to user needs and business goals.",
+    "Software engineer with a foundation in computer programming and databases. I build full-stack web products, desktop tools and realtime applications, including AI integrations. My AI-native workflow combines Codex and Claude Code with architecture, typed contracts, code review and automated testing. UX, design systems and conversion optimization inform my engineering decisions.",
   experience: [
     {
       role: "Senior UX Engineer",
@@ -101,15 +107,39 @@ export const cvData = {
   selectedWork: [
     {
       name: "Surfel",
-      desc: "SaaS product in development: full-stack application, APIs and data access, built with AI-assisted workflows.",
+      desc: "SaaS in development: Next.js/TypeScript monorepo, PostgreSQL data models, role-based access, APIs, webhooks and background jobs.",
     },
     {
       name: "cxbilen.com",
-      desc: "Next.js portfolio with shared theme tokens, responsive components, CV downloads and automated tests.",
+      desc: "Live Next.js/TypeScript portfolio with COSS components, shared-source PDF/DOCX CV exports, component tests and browser checks.",
+    },
+    {
+      name: "Dev Migration Assistant",
+      desc: "Released Electron/React desktop tool for Git working state and AI context migration; typed IPC, encrypted archives and checksum-verified restore.",
+    },
+    {
+      name: "PlayAgain",
+      desc: "Browser gaming application with Next.js, WebRTC, WebSocket and Redis; phone controllers, QR room pairing and save-state APIs.",
+    },
+    {
+      name: "Looplift",
+      desc: "Next.js/Supabase beta for AI-assisted conversion audits; versioned experiment patches, human approval, measurement guardrails and rollback.",
+    },
+    {
+      name: "Maestro",
+      desc: "AI execution workspace with Next.js, Bun workers, PostgreSQL and Redis; typed job lifecycle, streamed output and artifact review.",
     },
     {
       name: "SkyWise",
-      desc: "Travel-assistant case study: typed React interfaces and interaction flows with simulated service integrations.",
+      desc: "Next.js/React travel-assistant case study with typed interaction flows, rule-based intents and simulated service integrations.",
+    },
+    {
+      name: "LENZ",
+      desc: "Live virtual try-on product using Next.js, Supabase and Gemini image-generation APIs; merchant authentication, rate limits and usage tracking.",
+    },
+    {
+      name: "ZEDrift",
+      desc: "Browser driving game with React/Three.js rendering, drift physics, Socket.IO multiplayer and PostgreSQL/Prisma account persistence.",
     },
   ],
 };

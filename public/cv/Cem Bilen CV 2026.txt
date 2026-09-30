@@ -5,16 +5,22 @@ Portfolio: https://cxbilen.com | GitHub: https://github.com/CXBilen
 LinkedIn: https://linkedin.com/in/cxbilen
 
 Summary
-Software engineer with a foundation in computer programming and databases. I build web products across frontend, backend and API integrations, using AI throughout development alongside architecture, code review and testing. My experience in UX, design systems and conversion optimization connects technical decisions to user needs and business goals.
+Software engineer with a foundation in computer programming and databases. I build full-stack web products, desktop tools and realtime applications, including AI integrations. My AI-native workflow combines Codex and Claude Code with architecture, typed contracts, code review and automated testing. UX, design systems and conversion optimization inform my engineering decisions.
 
 Technical Skills
-Technologies: TypeScript / JavaScript, React, Next.js, Node.js, PostgreSQL / SQL, Supabase, Tailwind CSS, Git / GitHub, Playwright / Vitest, Codex / Claude Code, Figma, GA4 / Funnels.
-Capabilities: Frontend Development, Backend Development, API Integration, Data Modeling, AI-assisted Development, Test Automation, UX / UI Design, Design Systems, CRO / A/B Testing, Product Thinking.
+Technologies: TypeScript / JavaScript, React, Next.js, Node.js, Bun / Electron, PostgreSQL / SQL, Redis, Supabase, WebRTC / WebSocket / Socket.IO, Google Gemini API, Tailwind CSS, Git / GitHub, Playwright / Vitest, Codex / Claude Code, Figma, GA4 / Funnels.
+Capabilities: Frontend Development, Backend Development, API Integration, Data Modeling, AI-assisted Development, AI API Integration, Realtime Applications, Test Automation, UX / UI Design, Design Systems, CRO / A/B Testing, Product Thinking.
 
 Projects
-Surfel: SaaS product in development: full-stack application, APIs and data access, built with AI-assisted workflows.
-cxbilen.com: Next.js portfolio with shared theme tokens, responsive components, CV downloads and automated tests.
-SkyWise: Travel-assistant case study: typed React interfaces and interaction flows with simulated service integrations.
+Surfel: SaaS in development: Next.js/TypeScript monorepo, PostgreSQL data models, role-based access, APIs, webhooks and background jobs.
+cxbilen.com: Live Next.js/TypeScript portfolio with COSS components, shared-source PDF/DOCX CV exports, component tests and browser checks.
+Dev Migration Assistant: Released Electron/React desktop tool for Git working state and AI context migration; typed IPC, encrypted archives and checksum-verified restore.
+PlayAgain: Browser gaming application with Next.js, WebRTC, WebSocket and Redis; phone controllers, QR room pairing and save-state APIs.
+Looplift: Next.js/Supabase beta for AI-assisted conversion audits; versioned experiment patches, human approval, measurement guardrails and rollback.
+Maestro: AI execution workspace with Next.js, Bun workers, PostgreSQL and Redis; typed job lifecycle, streamed output and artifact review.
+SkyWise: Next.js/React travel-assistant case study with typed interaction flows, rule-based intents and simulated service integrations.
+LENZ: Live virtual try-on product using Next.js, Supabase and Gemini image-generation APIs; merchant authentication, rate limits and usage tracking.
+ZEDrift: Browser driving game with React/Three.js rendering, drift physics, Socket.IO multiplayer and PostgreSQL/Prisma account persistence.
 
 Experience
 Senior UX Engineer | Efsora Labs

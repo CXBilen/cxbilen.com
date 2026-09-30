@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cem Bilen CV 2026 - Software Engineer</title>
-<meta name="description" content="Software engineer with a foundation in computer programming and databases. I build web products across frontend, backend and API integrations, using AI throughout development alongside architecture, code review and testing. My experience in UX, design systems and conversion optimization connects technical decisions to user needs and business goals.">
+<meta name="description" content="Software engineer with a foundation in computer programming and databases. I build full-stack web products, desktop tools and realtime applications, including AI integrations. My AI-native workflow combines Codex and Claude Code with architecture, typed contracts, code review and automated testing. UX, design systems and conversion optimization inform my engineering decisions.">
 <style>
   @font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: block; src: url('./fonts/Inter-Regular.ttf') format('truetype'); }
   @font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: block; src: url('./fonts/Inter-Bold.ttf') format('truetype'); }
@@ -13,26 +13,29 @@
   :root[data-theme="dark"] { --background: #161616; --foreground: #f5f5f5; --muted-foreground: #818181; --border: #242424; }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
-  body { font: 400 10.5pt/1.24 Inter, Arial, sans-serif; color: var(--foreground); background: var(--background); font-variant-ligatures: none; font-feature-settings: "calt" 0, "liga" 0; }
-  .cv { max-width: 210mm; margin: 0 auto; padding: 12mm; }
+  body { font: 400 11pt/1.35 Inter, Arial, sans-serif; color: var(--foreground); background: var(--background); font-variant-ligatures: none; font-feature-settings: "calt" 0, "liga" 0; }
+  .cv { max-width: 210mm; margin: 0 auto; padding: 14mm; }
   h1 { font-size: 25pt; line-height: 1.1; margin: 0 0 3pt; font-weight: 700; letter-spacing: -.035em; }
   .role { font-size: 11.5pt; margin: 0 0 6pt; }
   .contact { font-style: normal; }
   .contact p { margin: 0; }
   a { color: inherit; text-decoration: none; }
-  h2 { font-size: 11.5pt; line-height: 1.2; font-weight: 700; margin: 9pt 0 4pt; padding: 0; }
-  h3 { font-size: 10.5pt; line-height: 1.24; font-weight: 700; margin: 0; }
+  h2 { font-size: 11.5pt; line-height: 1.2; font-weight: 700; margin: 12pt 0 5pt; padding: 0; }
+  h3 { font-size: 11pt; line-height: 1.35; font-weight: 700; margin: 0; }
   p { margin: 0; }
   .period { color: var(--muted-foreground); font-weight: 400; }
   .entry { margin-top: 5pt; break-inside: avoid; }
   .entry:first-of-type { margin-top: 0; }
   .entry p + p { margin-top: 2pt; }
   .skills p + p { margin-top: 3pt; }
-  .projects p + p { margin-top: 4pt; }
+  .skill { white-space: nowrap; }
+  .projects p { break-inside: avoid; }
+  .projects p + p { margin-top: 6pt; }
+  .experience { break-before: page; }
   h2, h3 { break-after: avoid; }
   p { orphans: 2; widows: 2; }
   .theme-toggle { position: fixed; top: 16px; right: 16px; border: 1px solid var(--border); padding: 9px 12px; border-radius: .625rem; background: var(--background); color: var(--foreground); font: 400 12px/1 Inter,sans-serif; cursor: pointer; }
-  @page { size: A4; margin: 12mm; background: var(--background); }
+  @page { size: A4; margin: 14mm; background: var(--background); }
   @media print { html { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .cv { width: auto; max-width: none; margin: 0; padding: 0; } .theme-toggle { display: none; } }
   @media screen and (max-width: 700px) { .cv { padding: 28px 20px; } .theme-toggle { position: static; margin: 0 20px 20px; } }
 </style>
@@ -48,20 +51,26 @@
   </div>
   <section>
     <h2>Summary</h2>
-    <p>Software engineer with a foundation in computer programming and databases. I build web products across frontend, backend and API integrations, using AI throughout development alongside architecture, code review and testing. My experience in UX, design systems and conversion optimization connects technical decisions to user needs and business goals.</p>
+    <p>Software engineer with a foundation in computer programming and databases. I build full-stack web products, desktop tools and realtime applications, including AI integrations. My AI-native workflow combines Codex and Claude Code with architecture, typed contracts, code review and automated testing. UX, design systems and conversion optimization inform my engineering decisions.</p>
   </section>
   <section class="skills">
     <h2>Technical Skills</h2>
-    <p><strong>Technologies:</strong> TypeScript / JavaScript, React, Next.js, Node.js, PostgreSQL / SQL, Supabase, Tailwind CSS, Git / GitHub, Playwright / Vitest, Codex / Claude Code, Figma, GA4 / Funnels.</p>
-    <p><strong>Capabilities:</strong> Frontend Development, Backend Development, API Integration, Data Modeling, AI-assisted Development, Test Automation, UX / UI Design, Design Systems, CRO / A/B Testing, Product Thinking.</p>
+    <p><strong>Technologies:</strong> <span class="skill">TypeScript / JavaScript</span>, <span class="skill">React</span>, <span class="skill">Next.js</span>, <span class="skill">Node.js</span>, <span class="skill">Bun / Electron</span>, <span class="skill">PostgreSQL / SQL</span>, <span class="skill">Redis</span>, <span class="skill">Supabase</span>, <span class="skill">WebRTC / WebSocket / Socket.IO</span>, <span class="skill">Google Gemini API</span>, <span class="skill">Tailwind CSS</span>, <span class="skill">Git / GitHub</span>, <span class="skill">Playwright / Vitest</span>, <span class="skill">Codex / Claude Code</span>, <span class="skill">Figma</span>, <span class="skill">GA4 / Funnels</span>.</p>
+    <p><strong>Capabilities:</strong> <span class="skill">Frontend Development</span>, <span class="skill">Backend Development</span>, <span class="skill">API Integration</span>, <span class="skill">Data Modeling</span>, <span class="skill">AI-assisted Development</span>, <span class="skill">AI API Integration</span>, <span class="skill">Realtime Applications</span>, <span class="skill">Test Automation</span>, <span class="skill">UX / UI Design</span>, <span class="skill">Design Systems</span>, <span class="skill">CRO / A/B Testing</span>, <span class="skill">Product Thinking</span>.</p>
   </section>
   <section class="projects">
     <h2>Projects</h2>
-    <p><strong>Surfel:</strong> SaaS product in development: full-stack application, APIs and data access, built with AI-assisted workflows.</p>
-    <p><strong>cxbilen.com:</strong> Next.js portfolio with shared theme tokens, responsive components, CV downloads and automated tests.</p>
-    <p><strong>SkyWise:</strong> Travel-assistant case study: typed React interfaces and interaction flows with simulated service integrations.</p>
+    <p><strong>Surfel:</strong> SaaS in development: Next.js/TypeScript monorepo, PostgreSQL data models, role-based access, APIs, webhooks and background jobs.</p>
+    <p><strong>cxbilen.com:</strong> Live Next.js/TypeScript portfolio with COSS components, shared-source PDF/DOCX CV exports, component tests and browser checks.</p>
+    <p><strong>Dev Migration Assistant:</strong> Released Electron/React desktop tool for Git working state and AI context migration; typed IPC, encrypted archives and checksum-verified restore.</p>
+    <p><strong>PlayAgain:</strong> Browser gaming application with Next.js, WebRTC, WebSocket and Redis; phone controllers, QR room pairing and save-state APIs.</p>
+    <p><strong>Looplift:</strong> Next.js/Supabase beta for AI-assisted conversion audits; versioned experiment patches, human approval, measurement guardrails and rollback.</p>
+    <p><strong>Maestro:</strong> AI execution workspace with Next.js, Bun workers, PostgreSQL and Redis; typed job lifecycle, streamed output and artifact review.</p>
+    <p><strong>SkyWise:</strong> Next.js/React travel-assistant case study with typed interaction flows, rule-based intents and simulated service integrations.</p>
+    <p><strong>LENZ:</strong> Live virtual try-on product using Next.js, Supabase and Gemini image-generation APIs; merchant authentication, rate limits and usage tracking.</p>
+    <p><strong>ZEDrift:</strong> Browser driving game with React/Three.js rendering, drift physics, Socket.IO multiplayer and PostgreSQL/Prisma account persistence.</p>
   </section>
-  <section>
+  <section class="experience">
     <h2>Experience</h2>
     <article class="entry">
   <h3>Senior UX Engineer | Efsora Labs <span class="period">| Feb 2026 - Jul 2026 · Türkiye</span></h3>
