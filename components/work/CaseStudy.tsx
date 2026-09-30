@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import type { Project } from "@/lib/projects";
 
 export default function CaseStudy({ project }: { project: Project }) {
+  const gallery = [...new Set([project.cover, ...project.gallery])];
+
   return (
     <article className="mx-auto flex w-full max-w-3xl flex-col gap-10 px-6 py-12 sm:py-16">
       <div>
@@ -56,7 +58,13 @@ export default function CaseStudy({ project }: { project: Project }) {
         )}
       </header>
       <figure className="flex flex-col gap-3">
-        <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border bg-muted">
+        <a
+          href={project.cover}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open ${project.title} cover at full size (opens in a new tab)`}
+          className="relative block aspect-[16/10] overflow-hidden rounded-2xl border bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        >
           <Image
             src={project.cover}
             alt={project.coverAlt ?? `${project.title} interface`}
@@ -64,7 +72,7 @@ export default function CaseStudy({ project }: { project: Project }) {
             className="object-cover object-top"
             sizes="(max-width: 767px) 100vw, 720px"
           />
-        </div>
+        </a>
         {project.imageNote && (
           <figcaption className="text-xs leading-relaxed text-muted-foreground">
             {project.imageNote}
@@ -87,22 +95,53 @@ export default function CaseStudy({ project }: { project: Project }) {
           </p>
         </section>
       ))}
-      <div className="grid gap-4 sm:grid-cols-2">
-        {project.gallery.map((src, i) => (
-          <div
-            key={src}
-            className="relative aspect-[4/3] overflow-hidden rounded-xl border bg-muted"
+      <section
+        className="flex flex-col gap-4"
+        aria-labelledby={`${project.slug}-visuals`}
+      >
+        <div className="flex flex-col gap-2">
+          <h2
+            id={`${project.slug}-visuals`}
+            className="text-xl font-semibold tracking-tight"
           >
-            <Image
-              src={src}
-              alt={`${project.title} visual ${i + 1}`}
-              fill
-              className="object-contain"
-              sizes="(max-width: 639px) 100vw, 360px"
-            />
-          </div>
-        ))}
-      </div>
+            Project visuals
+          </h2>
+          <p className="text-xs leading-relaxed text-muted-foreground">
+            Select an image to view it at full size.
+          </p>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {gallery.map((src, i) => (
+            <figure key={src} className="flex flex-col gap-2">
+              <a
+                href={src}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${project.title} visual ${i + 1} at full size (opens in a new tab)`}
+                className="relative block aspect-[4/3] overflow-hidden rounded-xl border bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                <Image
+                  src={src}
+                  alt={
+                    project.imageCaptions?.[src] ??
+                    (src === project.cover
+                      ? project.coverAlt ?? `${project.title} interface`
+                      : `${project.title} visual ${i + 1}`)
+                  }
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 639px) 100vw, 360px"
+                />
+              </a>
+              {project.imageCaptions?.[src] && (
+                <figcaption className="text-xs leading-relaxed text-muted-foreground">
+                  {project.imageCaptions[src]}
+                </figcaption>
+              )}
+            </figure>
+          ))}
+        </div>
+      </section>
     </article>
   );
 }

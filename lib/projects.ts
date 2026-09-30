@@ -12,6 +12,7 @@ export type Project = {
   problem: string;
   sections: CaseSection[];
   gallery: string[];
+  imageCaptions?: Record<string, string>;
   status?: string;
   imageNote?: string;
   links?: { label: string; href: string }[];
@@ -27,7 +28,7 @@ export const projects: Project[] = [
     year: "2026",
     role: "Product engineering · Full-stack development · UX",
     status: "In development",
-    imageNote: "Prototype UI with sample data.",
+    imageNote: "Account screens from the live application and earlier interface prototypes with sample data.",
     problem:
       "E-commerce shops need a controlled way to make their existing journeys usable by AI agents. I'm building Surfel around that problem, connecting product decisions and merchant workflows with the application, data and infrastructure they require.",
     sections: [
@@ -41,14 +42,23 @@ export const projects: Project[] = [
       },
       {
         heading: "Current state",
-        body: "The application, identity, data and infrastructure foundations are implemented. The merchant activation and agent execution journey remains in development. The gallery shows interface prototypes with example organizations and sample data.",
+        body: "The application, identity, data and infrastructure foundations are implemented. The merchant activation and agent execution journey remains in development. The gallery combines live site and plan interfaces with earlier prototypes using example organizations and sample data.",
       },
     ],
     gallery: [
       "/images/work/surfel-sites-light.png",
       "/images/work/surfel-sites-dark.png",
       "/images/work/surfel-installation.png",
+      "/images/work/surfel-live-sites.png",
+      "/images/work/surfel-live-billing.png",
     ],
+    imageCaptions: {
+      "/images/work/surfel-sites-light.png": "Site management prototype in the light theme; sample data.",
+      "/images/work/surfel-sites-dark.png": "Site management prototype in the dark theme; sample data.",
+      "/images/work/surfel-installation.png": "Integration setup prototype; sample data.",
+      "/images/work/surfel-live-sites.png": "Site management in the live account; no sites added in this view.",
+      "/images/work/surfel-live-billing.png": "Live plan interface showing an unavailable current plan state.",
+    },
     links: [{ label: "Surfel website", href: "https://surfel.io" }],
   },
   {
@@ -76,7 +86,20 @@ export const projects: Project[] = [
         body: "The site is live and its source is public. It brings implementation, project documentation and the CV together in an application I maintain directly.",
       },
     ],
-    gallery: ["/images/work/portfolio-dark.png", "/images/work/portfolio-light.png"],
+    gallery: [
+      "/images/work/portfolio-dark.png",
+      "/images/work/portfolio-light.png",
+      "/images/work/portfolio-mobile.png",
+      "/images/work/portfolio-work.png",
+      "/images/work/portfolio-cv.png",
+    ],
+    imageCaptions: {
+      "/images/work/portfolio-dark.png": "Personal website in the dark theme on desktop.",
+      "/images/work/portfolio-light.png": "Personal website in the light theme on desktop.",
+      "/images/work/portfolio-mobile.png": "Responsive personal website on a 390 px mobile viewport.",
+      "/images/work/portfolio-work.png": "Project overview from the website at desktop size.",
+      "/images/work/portfolio-cv.png": "Web CV with the shared professional content and download options.",
+    },
     links: [
       { label: "Visit website", href: "https://cxbilen.com" },
       { label: "View source", href: "https://github.com/CXBilen/cxbilen.com" },
@@ -108,7 +131,18 @@ export const projects: Project[] = [
         body: "The MIT-licensed source and v1.0.0 release are public on GitHub. The application targets macOS on Apple Silicon and keeps backup processing local. The images show an earlier interface preview; the repository documents the released backup and restore implementation.",
       },
     ],
-    gallery: ["/images/work/dev-migration-home.png", "/images/work/dev-migration-backup.png"],
+    gallery: [
+      "/images/work/dev-migration-home.png",
+      "/images/work/dev-migration-backup.png",
+      "/images/work/dev-migration-restore.png",
+      "/images/work/dev-migration-diagnostics.png",
+    ],
+    imageCaptions: {
+      "/images/work/dev-migration-home.png": "Home screen from the early development preview.",
+      "/images/work/dev-migration-backup.png": "Project selection in the backup wizard; development preview.",
+      "/images/work/dev-migration-restore.png": "Opening an archive in the restore wizard; development preview.",
+      "/images/work/dev-migration-diagnostics.png": "Application and provider diagnostics; development preview.",
+    },
     links: [
       { label: "View source", href: "https://github.com/CXBilen/dev-migration-assistant" },
       { label: "Download macOS release", href: "https://github.com/CXBilen/dev-migration-assistant/releases/tag/v1.0.0" },
@@ -119,11 +153,11 @@ export const projects: Project[] = [
     title: "PlayAgain",
     tagline: "A browser gaming application that connects a TV or desktop screen with phones as controllers.",
     tags: ["Next.js", "WebRTC", "WebSockets"],
-    cover: "/images/work/playagain-landing.png",
+    cover: "/images/work/playagain-01-canli-ana-sayfa.png",
     year: "2026",
     role: "Full-stack engineering · Realtime systems · Interaction design",
     status: "Web application · Personal project",
-    imageNote: "Development screenshots from the project repository, including a local pairing room.",
+    imageNote: "Live website, host room, paired phone controller and built-in Demo Arena, captured in September 2026.",
     problem:
       "Playing together across a shared screen and personal phones requires a clear pairing flow, responsive input and reliable connection handling. I built PlayAgain around a host screen, mobile controllers and browser-based emulation, bringing those separate device roles into one application.",
     sections: [
@@ -137,10 +171,21 @@ export const projects: Project[] = [
       },
       {
         heading: "Verification",
-        body: "The repository includes tests for binary input protocols, connection state, host and controller behavior, and transport switching. The screenshots show the landing page, a development pairing lobby and the phone controller interface.",
+        body: "The repository includes tests for binary input protocols, connection state, host and controller behavior, and transport switching. The screenshots show the live landing page, host room, paired phone controller and the built-in controller demo.",
       },
     ],
-    gallery: ["/images/work/playagain-lobby.png", "/images/work/playagain-controller.png"],
+    gallery: [
+      "/images/work/playagain-01-canli-ana-sayfa.png",
+      "/images/work/playagain-02-canli-host-lobi.png",
+      "/images/work/playagain-03-canli-telefon-kumandasi.png",
+      "/images/work/playagain-04-canli-demo-arena.png",
+    ],
+    imageCaptions: {
+      "/images/work/playagain-01-canli-ana-sayfa.png": "Current product landing page on the live website.",
+      "/images/work/playagain-02-canli-host-lobi.png": "Live host room with QR pairing and console choices.",
+      "/images/work/playagain-03-canli-telefon-kumandasi.png": "Phone controller paired to the live room over WebSocket.",
+      "/images/work/playagain-04-canli-demo-arena.png": "Built-in Demo Arena for testing controller input.",
+    },
     links: [{ label: "Visit PlayAgain", href: "https://www.playagain.app" }],
   },
   {
@@ -148,11 +193,11 @@ export const projects: Project[] = [
     title: "Looplift",
     tagline: "An AI-assisted experimentation platform connecting storefront audits, variant generation and A/B testing.",
     tags: ["Full-stack", "AI workflows", "CRO"],
-    cover: "/images/work/looplift-home.png",
+    cover: "/images/work/looplift-overview-dark.png",
     year: "2026",
     role: "Full-stack engineering · AI workflows · Conversion optimization",
     status: "Private beta",
-    imageNote: "Public landing page with illustrative experiment data, captured in September 2026.",
+    imageNote: "Account screens from the owner's store and the public landing page, captured in September 2026. Landing page experiment data is illustrative.",
     problem:
       "Shopify merchants need to turn conversion findings into experiments they can review, launch and evaluate. I built Looplift around that workflow, connecting evidence collection, AI-assisted recommendations, generated variants and explicit human approval.",
     sections: [
@@ -162,14 +207,27 @@ export const projects: Project[] = [
       },
       {
         heading: "Product decisions",
-        body: "Opportunities persist as distinct product records so audits and proposals can build on the same finding. Merchants review each generated change before launch. The current delivery uses a JavaScript snippet and client-side measurement, with interfaces for comparing variants and tracking the experiment state.",
+        body: "Opportunities persist as distinct product records so audits and proposals can build on the same finding. Merchants review each generated change before launch. The interface brings audits, reviewed variants and experiment states together.",
       },
       {
         heading: "Current state",
         body: "The project is in private beta. The audit-to-launch workflow and experiment controls are implemented. The documented evidence has not yet established a statistically conclusive experiment or a proven learning loop; those outcomes need further usage and validation.",
       },
     ],
-    gallery: [],
+    gallery: [
+      "/images/work/looplift-overview-dark.png",
+      "/images/work/looplift-overview-light.png",
+      "/images/work/looplift-audit-findings.png",
+      "/images/work/looplift-experiments.png",
+      "/images/work/looplift-home.png",
+    ],
+    imageCaptions: {
+      "/images/work/looplift-overview-dark.png": "Owner's store overview in the dark theme; no running tests or shipped winners.",
+      "/images/work/looplift-overview-light.png": "The same store overview in the light theme.",
+      "/images/work/looplift-audit-findings.png": "Recorded audit findings for the owner's store.",
+      "/images/work/looplift-experiments.png": "Experiment list with setup and concluded states; no shipped winners.",
+      "/images/work/looplift-home.png": "Public landing page with an illustrative experiment example.",
+    },
     links: [{ label: "Visit Looplift", href: "https://www.looplift.io" }],
   },
   {
@@ -182,7 +240,7 @@ export const projects: Project[] = [
     year: "2026",
     role: "Application architecture · Agent orchestration · Full-stack engineering",
     status: "Engineering project · Private source",
-    imageNote: "Architecture diagram based on the implementation in the repository.",
+    imageNote: "Local product and sign-in interfaces, alongside an architecture diagram based on the repository implementation.",
     problem:
       "AI-generated work needs project context, execution state and a place to review the result. I developed Maestro as a workspace that connects project goals to agent runs, streamed output, persisted artifacts and review decisions.",
     sections: [
@@ -199,7 +257,18 @@ export const projects: Project[] = [
         body: "The repository includes component generation, UX audit and design-system job types, workspace management and infrastructure configuration. This case study presents the implemented application structure and execution workflow. The cover illustrates those system boundaries.",
       },
     ],
-    gallery: [],
+    gallery: [
+      "/images/work/maestro-architecture.svg",
+      "/images/work/maestro-workflow-desktop.png",
+      "/images/work/maestro-login-dark.png",
+      "/images/work/maestro-login-mobile.png",
+    ],
+    imageCaptions: {
+      "/images/work/maestro-architecture.svg": "Implementation architecture diagram; this is not an application screenshot.",
+      "/images/work/maestro-workflow-desktop.png": "Product workflow section from the local application.",
+      "/images/work/maestro-login-dark.png": "Local account sign-in interface in the dark theme.",
+      "/images/work/maestro-login-mobile.png": "Local account sign-in interface on mobile.",
+    },
   },
   {
     slug: "skywise",
@@ -231,7 +300,18 @@ export const projects: Project[] = [
       "/images/work/skywise-chat.png",
       "/images/work/skywise-onboarding.png",
       "/images/work/skywise-import.png",
+      "/images/work/skywise-flight-choice.png",
+      "/images/work/skywise-flight-choice-mobile.png",
+      "/images/work/skywise-trip-management.png",
     ],
+    imageCaptions: {
+      "/images/work/skywise-chat.png": "Travel assistant prototype with sample conversations.",
+      "/images/work/skywise-onboarding.png": "Onboarding flow from the interactive prototype.",
+      "/images/work/skywise-import.png": "Travel import flow with simulated integration data.",
+      "/images/work/skywise-flight-choice.png": "Desktop flight selection in the local application using sample flights.",
+      "/images/work/skywise-flight-choice-mobile.png": "The same flight selection flow on mobile; sample flights.",
+      "/images/work/skywise-trip-management.png": "Trip management in the local application; sample trips and calendar states.",
+    },
     links: [{ label: "View source and case study", href: "https://github.com/CXBilen/skywise" }],
   },
   {
@@ -239,11 +319,11 @@ export const projects: Project[] = [
     title: "LENZ",
     tagline: "An AI virtual try-on application connecting a shopping interface with image generation and merchant APIs.",
     tags: ["Full-stack", "Generative AI", "Supabase"],
-    cover: "/images/work/lenz-home.png",
+    cover: "/images/work/lenz-home-desktop.png",
     year: "2025",
     role: "Full-stack development · AI integration · E-commerce UX",
     status: "Live website · Personal project",
-    imageNote: "Public landing page captured in September 2026.",
+    imageNote: "Public website and try-on selection flow, captured in September 2026.",
     problem:
       "Virtual try-on needs more than an image generation screen: shoppers need a clear photo and garment flow, while merchants need authentication, usage controls and an integration surface. I built Lenz to connect that user experience with the application logic and services behind it.",
     sections: [
@@ -260,7 +340,16 @@ export const projects: Project[] = [
         body: "The public website introduces the try-on product and provides account and demo entry points. The implementation connects the try-on interface, image generation routes and merchant account operations in one application.",
       },
     ],
-    gallery: [],
+    gallery: [
+      "/images/work/lenz-home-desktop.png",
+      "/images/work/lenz-tryon-product-step.png",
+      "/images/work/lenz-tryon-link-mobile.png",
+    ],
+    imageCaptions: {
+      "/images/work/lenz-home-desktop.png": "Current public virtual try-on product landing page.",
+      "/images/work/lenz-tryon-product-step.png": "Product image selection in the public try-on demo.",
+      "/images/work/lenz-tryon-link-mobile.png": "Garment URL input in the public demo on mobile.",
+    },
     links: [{ label: "Visit Lenz", href: "https://lenz.style" }],
   },
   {
@@ -273,7 +362,7 @@ export const projects: Project[] = [
     year: "2025",
     role: "3D frontend development · Realtime backend · Game interactions",
     status: "Game project · Private source",
-    imageNote: "City map asset from the project repository.",
+    imageNote: "Local account interfaces and the repository's city map asset. The game server was offline during capture.",
     problem:
       "A multiplayer driving game must connect a responsive local scene with shared player state and understandable controls. I built ZEDrift around a browser-rendered city, drift and boost interactions, and a Node.js server that coordinates the connected players.",
     sections: [
@@ -290,7 +379,18 @@ export const projects: Project[] = [
         body: "The source separates rendering and game physics from server-side account and connection handling. The cover is a city map asset used by the project; it shows the spatial setting behind the driving experience.",
       },
     ],
-    gallery: [],
+    gallery: [
+      "/images/work/zedrift-city-plan.png",
+      "/images/work/zedrift-login-desktop.png",
+      "/images/work/zedrift-signup-desktop.png",
+      "/images/work/zedrift-login-mobile.png",
+    ],
+    imageCaptions: {
+      "/images/work/zedrift-city-plan.png": "City map asset from the project repository; top-down layout.",
+      "/images/work/zedrift-login-desktop.png": "Player sign-in in a local frontend session; server offline.",
+      "/images/work/zedrift-signup-desktop.png": "Player registration interface in the local frontend; form not submitted.",
+      "/images/work/zedrift-login-mobile.png": "Responsive player sign-in interface in the local frontend; server offline.",
+    },
   },
 ];
 
