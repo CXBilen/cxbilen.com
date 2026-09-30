@@ -53,7 +53,7 @@ SOFTWARE.
 
 ### Header theme icon
 
-The header uses `ComputerIcon`, `Moon02Icon` and `Sun03Icon` from `@hugeicons/core-free-icons@2.0.0`, rendered with `@hugeicons/react@1.1.10`. Both packages declare the MIT license. The renderer ships the Hugeicons MIT notice below; the icon pack declares MIT in its package metadata. This is the icon family used by the pinned [COSS ModeSwitcher](https://github.com/cosscom/coss/blob/59e8c88c4be28cbfdd9eb3cd7274c60ffa91413e/packages/ui/src/shared/mode-switcher.tsx); the local icons represent each selected preference using the same size and stroke width. The local three-mode cycling logic is project-specific. No shared AGPL component source is vendored.
+The header uses `Moon02Icon` and `Sun03Icon` from `@hugeicons/core-free-icons@2.0.0`, rendered with `@hugeicons/react@1.1.10`. Both packages declare the MIT license. The renderer ships the Hugeicons MIT notice below; the icon pack declares MIT in its package metadata. This is the icon family used by the pinned [COSS ModeSwitcher](https://github.com/cosscom/coss/blob/59e8c88c4be28cbfdd9eb3cd7274c60ffa91413e/packages/ui/src/shared/mode-switcher.tsx); the local icons represent each selected preference using the same size and stroke width. System mode uses `ContrastIcon` from the existing `lucide-react` dependency, which retains its upstream ISC license. The local three-mode cycling logic is project-specific. No shared AGPL component source is vendored.
 
 - [Hugeicons free icon package](https://www.npmjs.com/package/@hugeicons/core-free-icons/v/2.0.0)
 - [Hugeicons React renderer](https://www.npmjs.com/package/@hugeicons/react/v/1.1.10)

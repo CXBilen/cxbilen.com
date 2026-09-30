@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { ComputerIcon, Moon02Icon, Sun03Icon } from "@hugeicons/core-free-icons";
+import { Moon02Icon, Sun03Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
+import { ContrastIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function ThemeToggle() {
@@ -20,12 +21,6 @@ export default function ThemeToggle() {
         : "system";
   const labels = { system: "System", dark: "Dark", light: "Light" };
   const label = `Toggle theme: ${labels[currentTheme]}. Switch to ${labels[nextTheme]}.`;
-  const icon =
-    currentTheme === "system"
-      ? ComputerIcon
-      : currentTheme === "dark"
-        ? Moon02Icon
-        : Sun03Icon;
   return (
     <Button
       className="relative size-8"
@@ -35,12 +30,16 @@ export default function ThemeToggle() {
       title={label}
       onClick={() => setTheme(nextTheme)}
     >
-      <HugeiconsIcon
-        aria-hidden="true"
-        className="size-4"
-        icon={icon}
-        strokeWidth={2}
-      />
+      {currentTheme === "system" ? (
+        <ContrastIcon aria-hidden="true" className="size-4" strokeWidth={2} />
+      ) : (
+        <HugeiconsIcon
+          aria-hidden="true"
+          className="size-4"
+          icon={currentTheme === "dark" ? Moon02Icon : Sun03Icon}
+          strokeWidth={2}
+        />
+      )}
     </Button>
   );
 }
